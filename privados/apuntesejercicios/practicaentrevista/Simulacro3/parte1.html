@@ -1,0 +1,96 @@
+<!--Entrevistador 1
+
+FASE 1:
+1.¿Qué es el Virtual DOM en React?
+R: Es una representación en memoria de la interfaz de usuario que permite actualizar solo las partes necesarias sin re-renderizar todo el árbol de componentes.
+
+2.¿Qué es JSX? ¿Es obligatorio usarlo?
+R: JSX es una sintaxis que permite escribir HTML dentro de JavaScript. No es obligatorio usarlo, pero es una práctica común en React.
+
+3.¿Qué es la cascada en CSS y cómo se determina qué estilo se aplica?
+R: La cascada en CSS es un mecanismo que determina qué estilo se aplica a un elemento cuando hay conflictos entre estilos. Se determina por la especificidad del selector y el orden en que se declaran los estilos.
+
+4.¿Qué significa que JavaScript es un lenguaje de tipado débil o dinámico?
+R: JavaScript es un lenguaje de tipado débil o dinámico, lo que significa que no se requiere declarar el tipo de una variable al momento de su creación y que el tipo de una variable puede cambiar durante la ejecución del programa.
+
+5.¿Qué es el renderizado condicional?
+R: El renderizado condicional es un mecanismo que permite mostrar o ocultar elementos en la interfaz de usuario según ciertas condiciones.
+
+FASE 2: TOMAR EL TIEMPO (max 10 min para desarrollar el ejercicio) 
+Objetivo: Crear elementos dinámicamente.
+Requisitos:
+Un input.
+Un botón “Agregar”.
+Una lista (<ul>) donde cada ítem nuevo aparezca al hacer clic.-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #fff;
+            }
+            input {
+                padding: 10px;
+                margin: 10px;
+            }
+            button {
+                padding: 10px;
+                margin: 10px;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            li {
+                padding: 10px;
+                margin: 10px;
+            }
+            #input {
+                padding: 10px;
+                margin: 10px;
+            }
+            #agregar {
+                padding: 10px;
+                margin: 10px;
+            }
+            #lista {
+                padding: 10px;
+                margin: 10px;
+            }
+            #item {
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="input">
+        <button id="agregar" onclick="agregar()">Agregar</button>
+        <ul id="lista">
+            <li id="item"></li>
+        </ul>
+    </body>
+    <script>
+        const agregar = document.getElementById('agregar');
+        const lista = document.getElementById('lista');
+        const item = document.getElementById('item');
+
+        agregar.addEventListener('click', () => {
+            const valor = document.getElementById('input').value;
+            const li = document.createElement('li');
+            li.textContent = valor;
+            lista.appendChild(li);
+        });
+    </script>
+    </html>

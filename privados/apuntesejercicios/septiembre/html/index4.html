@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDULA - Sistema Interoperable FONASA</title>
+    <link rel="stylesheet" href="style3.css">
+    <!-- Iconos (reemplazar con tu propia fuente de iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo MEDULA -->
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <div class="logo-text">
+                    <h1 class="logo-title">MEDULA</h1>
+                    <p class="logo-subtitle">Sistema Interoperable FONASA</p>
+                </div>
+            </div>
+
+            <!-- Buscador de pacientes -->
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar paciente por RUT o nombre..."
+                        class="search-input"
+                    />
+                </div>
+            </div>
+
+            <!-- Usuario y notificaciones -->
+            <div class="user-container">
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt security-icon"></i>
+                    <span class="badge secure-badge">Sesión Segura</span>
+                </div>
+                
+                <button class="icon-button notification-button">
+                    <i class="fas fa-bell bell-icon"></i>
+                    <span class="badge notification-badge">3</span>
+                </button>
+
+                <div class="user-profile">
+                    <div class="user-info">
+                        <p class="user-name">Dr. María González</p>
+                        <p class="user-institution">Hospital El Salvador</p>
+                    </div>
+                    <div class="avatar">
+                        <div class="avatar-fallback">MG</div>
+                    </div>
+                    <button class="icon-button logout-button" title="Cerrar Sesión">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

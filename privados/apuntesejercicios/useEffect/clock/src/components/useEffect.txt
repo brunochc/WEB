@@ -1,0 +1,16 @@
+function useEffect() {
+    
+}
+useEffect permite controlar que el codigo se ejecute justamente despues de que se carga el componente. en este caso el codigo que se ejecuta es la peticion al back.
+
+1. front end
+datos de usuario--> peticion al back
+<-- datos del back
+
+2. back end
+<-- datos del front
+--> datos del front
+<-- datos del front
+--> datos del front
+|
+jsonplaceholder es un api que simula una base de datos.

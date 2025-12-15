@@ -1,0 +1,24 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "Introduccion a ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev":  "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunochc/expressjs.git"
+  },
+  "keywords": ["express", "api", "nodejs"],
+  "author": "Bruno Henriquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunochc/expressjs/issues"
+  },
+  "homepage": "https://github.com/brunochc/expressjs#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,114 @@
+/* Fuente estilo futurista (puedes usar Arial o una similar si no tienes acceso a una personalizada) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Estilo general */
+body {
+    background-color: #12121d; /* Fondo azul oscuro */
+    color: #e0e0e0; /* Texto gris claro */
+    font-family: 'Orbitron', sans-serif; /* Tipografía estilo futurista */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal (como el menú de GT1) */
+.gt-container {
+    background: linear-gradient(to bottom, #000007, #000022);
+    border: 1px solid #3a3a7a;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(133, 129, 129, 0.5);
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Títulos estilo GT1 */
+.gt-title {
+    color: #4a9cff; /* Azul brillante */
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(74, 156, 255, 0.7);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.gt-subtitle {
+    color: #8abcfa; /* Azul brillante */
+    text-align: center;
+    font-size: 1em;
+    text-shadow: 0 0 10px rgba(74, 156, 255, 0.7);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+/* Botones estilo menú de GT1 */
+.gt-button {
+    background: linear-gradient(to bottom, #1a1a4a, #0a0a2a);
+    border: 1px solid #4a9cff;
+    color: #e0e0e0;
+    cursor: pointer;
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    margin: 10px auto;
+    padding: 12px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    width: 80%;
+}
+
+.gt-button:hover {
+    background: linear-gradient(to bottom, #2a2a6a, #1a1a4a);
+    box-shadow: 0 0 10px rgba(74, 156, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* Efecto de selección (como en los menús de GT) */
+.gt-button:active {
+    transform: scale(0.98);
+}
+
+/* Sección de lista (como el garaje o torneos) */
+.gt-list {
+    list-style: none;
+    padding: 0;
+}
+
+.gt-list li {
+    background: rgba(10, 10, 40, 0.7);
+    border-left: 3px solid #4a9cff;
+    margin: 8px 0;
+    padding: 12px;
+    transition: all 0.3s;
+}
+
+.gt-list li:hover {
+    background: rgba(30, 30, 80, 0.7);
+    border-left: 5px solid #4a9cff;
+}
+
+/* Barra de progreso (como las licencias) */
+.gt-progress {
+    background: #0a0a2a;
+    border: 1px solid #3a3a7a;
+    height: 20px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.gt-progress-bar {
+    background: linear-gradient(to right, #0044cc, #4a9cff);
+    height: 100%;
+    width: 0%; /* Ajusta este valor según progreso */
+    transition: width 0.5s;
+}
+
+/* Efecto de "Replay Theater" (brillos) */
+.gt-highlight {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; text-shadow: 0 0 15px #4a9cff; }
+    100% { opacity: 0.7; }
+}

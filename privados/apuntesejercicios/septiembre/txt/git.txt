@@ -1,0 +1,43 @@
+git
+
+control de versiones
+
+Permite registrar hitos en el codigo fuente (main)
+
+git init -->
+Inicializa un repositorio git en la carpeta actual
+
+Initialized empty Git repository in /home/neo/Dev/apuntesejercicios/septiembre/.git/
+
+git .gitignore -->
+ignora archivos
+
+git status -->
+Muestra el estado del repositorio
+
+git add . -->
+Agrega todos los archivos al repositorio
+ 
+git add archivo -->
+Agrega un archivo al repositorio
+
+git commit -m "mensaje" -->
+Crea un hito en el repositorio
+
+git log -->
+Muestra el historial de hitos
+
+git diff -->
+Muestra las diferencias entre versiones
+
+git branch -->
+Muestra las ramas
+
+las ramas permiten crear versiones paralelas del codigo fuente. para probar nuevas funcionalidades sin afectar el codigo fuente principal.
+
+git branch nombre -->
+Crea una rama
+
+git checkout nombre -->
+Cambia a una rama
+

@@ -1,0 +1,29 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Tests Codign Loops
+      id: tests-codign-loops
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Tests Codign Loops
+        setup-command: npm install
+        command: npm run test
+        timeout: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TESTS-CODIGN-LOOPS_RESULTS: "${{steps.tests-codign-loops.outputs.result}}"
+      with:
+        runners: tests-codign-loops

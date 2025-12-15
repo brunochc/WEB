@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maderas y más</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            scroll-snap-type: y mandatory; /* Snap scroll vertical */
+            overflow-y: scroll; /* Asegura que el scroll esté habilitado */
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
+            box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+            scroll-snap-align: start; /* Ajusta el scroll al inicio de cada sección */
+        }
+        header h1 {
+            font-size: 2.5em; /* Agrandamos el encabezado */
+            margin: 0;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+        nav a:hover {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .section {
+            padding: 20px;
+            margin: 0; /* Eliminamos el margen superior e inferior */
+            border-radius: 8px;
+            background-color: black; /* Fondo negro */
+            background-size: cover;
+            background-position: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            font-size: 1.8em;
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            scroll-snap-align: start; /* Ajusta el scroll al inicio de cada sección */
+        }
+        .home, .projects, .furniture {
+            background-color: black; /* Fondo negro */
+        }
+        .contact, .location, .schedule {
+            background-color: #2d2d2d; /* Restauramos el color anterior */
+        }
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .contact-content .form-container, .contact-content .social-container {
+            flex: 1;
+            margin: 10px;
+        }
+        .social-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-container a {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+        }
+        .social-container a:hover {
+            background-color: #128C7E;
+        }
+        .carousel {
+            width: 100%;
+            height: calc(100vh - 60px);
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+        .location-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .map {
+            flex: 1;
+            margin-right: 20px;
+            max-width: 100%; /* Asegura que el iframe no exceda el ancho */
+        }
+        .address {
+            flex: 1;
+            text-align: center;
+        }
+        .address p {
+            margin: 5px 0;
+        }
+        .address .street {
+            font-size: 1.5em;
+        }
+        .address .commune {
+            font-size: 1.2em;
+        }
+        .address .country {
+            font-size: 1em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #1a3d5d;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #3b6b4c;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .menu-toggle:hover {
+                background-color: #444;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #333;
+                width: 100%;
+            }
+            .menu a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #444;
+            }
+            .menu a:hover {
+                background-color: #444;
+            }
+        }
+    </style>
+    <script>
+        const folders = {
+            projects: 'https://github.com/brunochc/img/raw/main/construccion/',
+            furniture: 'https://github.com/brunochc/img/raw/main/decomuebles/',
+            home: 'https://github.com/brunochc/img/raw/main/madera/'
+        };
+
+        const imageCounts = {
+            projects: 19,
+            furniture: 20,
+            home: 9
+        };
+
+        function getImageUrls(folder, count) {
+            const urls = [];
+            for (let i = 1; i <= count; i++) {
+                const paddedIndex = String(i).padStart(3, '0');
+                urls.push(`${folder}img${paddedIndex}.jpg`);
+            }
+            return urls;
+        }
+
+        const projectImages = getImageUrls(folders.projects, imageCounts.projects);
+        const furnitureImages = getImageUrls(folders.furniture, imageCounts.furniture);
+        const welcomeImages = getImageUrls(folders.home, imageCounts.home);
+
+        let currentProjectImageIndex = 0;
+        let currentFurnitureImageIndex = 0;
+        let currentWelcomeImageIndex = 0;
+
+        function changeImage(sectionId, images, currentIndex) {
+            const section = document.getElementById(sectionId);
+            section.style.backgroundImage = `url(${images[currentIndex]})`;
+            return (currentIndex + 1) % images.length;
+        }
+
+        function cycleImages() {
+            currentProjectImageIndex = changeImage('projects', projectImages, currentProjectImageIndex);
+            currentFurnitureImageIndex = changeImage('furniture', furnitureImages, currentFurnitureImageIndex);
+            currentWelcomeImageIndex = changeImage('home', welcomeImages, currentWelcomeImageIndex);
+        }
+
+        window.onload = function() {
+            cycleImages();
+            setInterval(cycleImages, 7500); // Cambia la imagen cada 7.5 segundos
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            menuToggle.addEventListener('click', () => {
+                menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+            });
+        };
+
+        function sendEmail(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const mailtoLink = `mailto:contacto@ulumber.cl?subject=${encodeURIComponent(formData.get('name'))}&body=${encodeURIComponent(formData.get('message'))}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Maderas y más</h1>
+        <div class="menu-toggle">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" alt="Menú" style="width: 30px; height: 30px;">
+        </div>
+        <nav class="menu">
+            <a href="#home">Inicio</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#furniture">Muebles</a>
+            <a href="#contact">Contacto</a>
+            <a href="#location">Ubicación</a>
+            <a href="#schedule">Agendar</a>
+        </nav>
+    </header>
+    <div class="section home" id="home">
+        <div class="content">
+            <h2>Bienvenido a Maderas y más</h2>
+            <p>Tu destino para productos de madera de alta calidad. Encuentra todo lo que necesitas para tus proyectos.</p>
+        </div>
+    </div>
+    <div class="section projects" id="projects">
+        <div class="content">
+            <h2>Nuestros Proyectos</h2>
+            <p>Explora una variedad de proyectos realizados con nuestras maderas premium. Desde remodelaciones hasta embellecimiento de espacios, tenemos lo que necesitas.</p>
+        </div>
+    </div>
+    <div class="section furniture" id="furniture">
+        <div class="content">
+            <h2>Muebles de Madera</h2>
+            <p>Fabricamos muebles de alta calidad con diseños únicos para tu hogar. Personaliza tus espacios con nuestros productos.</p>
+        </div>
+    </div>
+    <div class="section contact" id="contact">
+        <div class="content">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="form-container">
+                    <form onsubmit="sendEmail(event)">
+                        <input type="text" name="name" placeholder="Tu nombre" required>
+                        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                        <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <p>Puedes contactarnos por correo electrónico o a través de WhatsApp.</p>
+                </div>
+                <div class="social-container">
+                    <a href="https://wa.me/56928156161" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; height: 24px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section location" id="location">
+        <div class="content">
+            <h2>Ubicación</h2>
+            <div class="location-content">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207.09714720131706!2d-70.78210658254092!3d-33.84960160004468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96632303a6756c45%3A0x9882dfc625f59ae!2sUlumber!5e0!3m2!1ses-419!2sus!4v1736276592779!5m2!1ses-419!2sus" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="address">
+                    <p class="street">Avenida Miguel Letelier, 3A-2</p>
+                    <p class="commune">Sector Mansel, Comuna de Paine</p>
+                    <p class="country">RM, Chile</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section schedule" id="schedule">
+        <div class="content">
+            <h2>Agendar una Reunión</h2>
+            <p>Haz clic <a href="https://calendly.com/">aquí</a> para agendar una reunión con nosotros.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Maderas y más. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

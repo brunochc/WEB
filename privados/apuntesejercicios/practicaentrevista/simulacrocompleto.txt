@@ -1,0 +1,135 @@
+1.¿Qué es JavaScript y para qué se utiliza?
+R: JavaScript es un lenguaje de programación que se utiliza para crear interactividad y dinamismo en las páginas web.
+2.¿Cuál es la diferencia entre let, const y var en JavaScript?
+R: let y const son variables que se utilizan para declarar variables, var es una variable que se utiliza para declarar variables globales.
+3.¿Qué es una función flecha (arrow function) en JavaScript y cuál es su ventaja?
+R: Una función flecha es una forma de escribir funciones más cortas y concisas.
+4.¿Qué es el DOM (Document Object Model) en JavaScript?
+R: El DOM es un modelo de objetos que representa la estructura de una página web.
+5.¿Cuál es la diferencia entre null y undefined en JavaScript?
+R: null es un valor que representa la ausencia de un valor, undefined es un valor que representa que una variable no ha sido declarada.
+6.¿En un proyecto nodejs que es el archivo package.json?
+R: package.json es un archivo que contiene información sobre el proyecto y sus dependencias.
+7.¿Que es expressJs?
+R: Express es un framework de Node.js que facilita el desarrollo de aplicaciones web.
+8.¿Qué son los módulos en JavaScript?
+R: Los módulos son archivos que contienen código que se puede importar y usar en otros archivos.
+9.¿Cual es la diferencia entre DOM y DOM Virtual (pregunta sobre ReactJs)?
+R: DOM es un modelo de objetos que representa la estructura de una página web, DOM Virtual es un modelo de objetos que representa la estructura de una página web en memoria.
+10.¿Cuáles son las diferencias entre bases de datos de tipo relacionales y no relacionales?
+R: Las bases de datos de tipo relacionales son bases de datos que utilizan tablas para almacenar datos, las bases de datos de tipo no relacionales son bases de datos que utilizan documentos para almacenar datos.
+11.Define con tus palabras qué es un API.
+R: API es una interfaz de programación que permite que dos programas se comuniquen entre sí.
+12.Cuando hacemos una petición a un servidor para obtener un recurso mediante el método HTTP, ¿Qué verbo se utiliza?
+R: GET
+13.Para que se utiliza GIT
+R: GIT es un sistema de control de versiones que permite gestionar los cambios en el código fuente de un proyecto.
+14.¿Cuál es la diferencia entre == y ===?
+R: == compara los valores de dos variables, === compara los valores y los tipos de dos variables.
+15.¿Cómo puedes agregar un elemento al final de un arreglo en JavaScript?
+R: push
+16.¿Cómo puedes eliminar el último elemento de un arreglo en JavaScript?
+R: pop
+17.¿Cómo puedes encontrar la posición (índice) de un elemento específico en un arreglo en JavaScript?
+R: indexOf
+18.¿Qué es una promesa en js ?
+R: Una promesa es un objeto que representa un valor que puede estar disponible en el futuro.
+19.¿Qué es el estado (state) en React y cómo se diferencia de las props?
+R: El estado es un objeto que contiene datos que pueden cambiar a lo largo de la vida de un componente, las props son datos que se pasan de un componente a otro.
+20.¿Cómo puedes enlazar un archivo CSS externo a un documento HTML y cuál es la etiqueta que se utiliza para hacerlo?
+R: link
+21.¿Qué es el box model en CSS?
+R: El box model es un modelo que describe la forma en que se organiza el contenido de una página web.
+22.¿Qué es MySQL y cuál es su función principal?
+R: MySQL es un sistema de gestión de base de datos que permite almacenar y gestionar datos en una base de datos.
+23.¿Cómo se realiza una consulta básica para seleccionar datos de una tabla en MySQL?
+R: SELECT
+24.¿En qué lugar se ejecuta generalmente el código JavaScript?
+R: En el navegador.
+25.¿Con cuál etiqueta se hace la inserción del código JavaScript en el HEAD de las páginas HTML?
+R: script
+26.¿Cuál es la instrucción usada para devolver un valor en una función de JavaScript?
+R: return
+27.¿Cómo se ejecuta una función en JavaScript?
+R: invocando la función, la manera más común es con el nombre de la función seguido de paréntesis.
+28.¿Cómo se agrega un evento a un elemento HTML utilizando JavaScript?
+R: addEventListener
+29.¿Qué es el estado (state) en React?
+R: El estado es un objeto que contiene datos que pueden cambiar a lo largo de la vida de un componente, las props son datos que se pasan de un componente a otro.
+30.¿Qué es el ciclo de vida de un componente en React?
+R: El ciclo de vida de un componente es una serie de eventos que ocurren en un componente a lo largo de su vida.
+31.¿Cuál es la diferencia entre las propiedades margin y padding en CSS?
+R: margin define el espacio exterior de un elemento, padding define el espacio interior.
+32.¿Cómo se crea un enlace (hipervínculo) en HTML?
+R: <a href=""></a>
+33.¿Cuál de las siguientes afirmaciones es cierta sobre las funciones en JavaScript
+R: Una función es un bloque de código que se puede ejecutar varias veces.
+34.¿Qué método se utiliza para agregar un elemento al final de un arreglo en JavaScript?
+R: push
+35.¿Cuál es la diferencia entre las propiedades margin y padding en CSS?
+R: margin define el espacio exterior de un elemento, padding define el espacio interior.
+36.¿Cómo se crea un enlace (hipervínculo) en HTML?
+R: <a href=""></a>
+37.¿Cuál de las siguientes afirmaciones es cierta sobre las funciones en JavaScript
+R: Una función es un bloque de código que se puede ejecutar varias veces.
+38.¿Qué método se utiliza para agregar un elemento al final de un arreglo en JavaScript?
+R: push
+
+"Muy Fácil
+Git: ¿Qué es eso de hacer un “commit”?
+R: Es como tomar una foto de tus cambios en el código, para recordar ese momento específico.
+GitHub: ¿Para qué sirve un “issue” en GitHub?
+R: Es como un recordatorio o nota que pones en un proyecto para seguirle la pista a errores o 
+cosas por hacer.
+Terminal: ¿Cómo haces para ver qué archivos tienes en una carpeta desde la terminal?
+R: Solo teclea ls y te mostrará todo lo que hay. Y con ls -la podrás ver los detalles y permisos.
+JavaScript: El .map() en los arrays, ¿qué hace?
+R: Transforma los elementos de una lista y te da una nueva con los cambios aplicados.
+Lógica de Programación: ¿Qué es un bucle?
+R: Es cuando quieres que tu código haga algo una y otra vez, un ciclo, una repetición.
+Fácil
+Git: Si quieres copiar un repositorio de Git, ¿qué comando usarías?
+R: Usas git clone seguido de la dirección del repositorio.
+GitHub: ¿Qué es un “Pull Request” o “PR”?
+R: Es pedir a una rama, que se lleve los cambios de la rama que yo seleccione.
+Terminal: ¿Cómo creas una carpeta nueva con la terminal?
+R: Usas mkdir seguido del nombre que quieras para la carpeta.
+JavaScript: Si tienes un texto y quieres convertirlo a número, ¿cómo lo haces en JavaScript?
+R: Puedes usar parseInt para números enteros o parseFloat para decimales.
+APIs: ¿Qué es eso de un endpoint en las APIs?
+R: Es una url en internet donde una API espera que le pidas algo o le mandes algo.
+Medio
+Git: ¿Qué es una “branch” en Git y cómo harías una nueva?
+R: Es como una nueva ruta para mi código, una rama basada en otra, donde puedo realizar 
+cambios sin modificar la inicial. Haces una nueva con git branch y el nombre que elijas.
+GitHub: Si dos personas editaron lo mismo y hay un conflicto, ¿cómo lo resuelven en GitHub?
+R: Tienen que ponerse de acuerdo y arreglar las diferencias en el código a mano, y luego subir la 
+versión final.
+Terminal: ¿Cómo haces para ver qué comandos has usado antes en la terminal?
+R: Escribe history y te saldrá una lista de lo que has tecleado antes. O puedes apretar la fecha hacia 
+arriba y se obtiene el anterior al actual.
+JavaScript: Entre var, let y const, ¿qué diferencias hay?
+R: var es la vieja confiable para variables, pero let y const son los nuevos para cosas más 
+específicas, const para lo que no cambia, una constante.
+Lógica de Programación: ¿Qué es la “programación orientada a objetos” y por qué se usa?
+R: Es como construir con bloques de Lego. Cada bloque es un objeto que tiene sus propias 
+características y formas de actuar. Esto nos ayuda a organizar mejor el código y a hacerlo más fácil 
+de manejar, especialmente en proyectos grandes.
+Medio-Avanzado
+Git: ¿Cómo traes cambios de una rama que está en el servidor a tu rama local?
+R: Primero usas git fetch para ver los cambios y luego git merge para traerlos a tu rama.
+GitHub: Antes de subir tus cambios, ¿cómo te aseguras de que tu rama local está al día con la 
+principal?
+R: Haces un git pull de la rama principal para actualizar tu rama.
+Frontend: ¿Qué es el “responsive design” y por qué es importante en el desarrollo web?
+R: El “responsive design” se trata de hacer que tu página web se vea bien y funcione en cualquier 
+dispositivo, no importa si es un teléfono, una tableta o una computadora de escritorio. Es como 
+tener ropa que se ajusta a cualquier tamaño. Es super importante porque la gente usa todo tipo de 
+dispositivos para navegar por la web, y quieres que tu sitio sea accesible y se vea bien para todos, 
+en cualquier lugar.
+JavaScript: ¿Cómo es eso de las promesas en JavaScript?
+R: Imagina que le pides a tu código que te prometa hacer algo más tarde. Las promesas te ayudan 
+a manejar esas situaciones.
+Scrum: ¿Qué es un sprint?
+R: Es una sección de tiempo que tiene sus propias tareas asignadas a integrantes del equipo, y esas 
+tareas tienen puntos de historia."

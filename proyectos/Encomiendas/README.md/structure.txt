@@ -1,0 +1,44 @@
+Encomiendas/
+│
+├── public/                      # Archivos accesibles públicamente
+│   ├── assets/
+│   │   ├── css/                 # Hojas de estilo
+│   │   │   ├── main.css         # Estilos principales
+│   │   │   └── steps.css        # Estilos específicos para el flujo por pasos
+│   │   │
+│   │   ├── js/                  # JavaScript del frontend
+│   │   │   ├── main.js          # Funcionalidades comunes
+│   │   │   ├── step1.js         # Lógica para el paso 1
+│   │   │   ├── step2.js         # Lógica para el paso 2
+│   │   │   └── step3.js         # Lógica para el paso 3
+│   │   │
+│   │   ├── img/                 # Imágenes estáticas
+│   │   └── videos/              # Videos de fondo
+│   │
+│   ├── index.html               # Página de inicio/paso 1
+│   ├── step2.html               # Segundo paso (selección de detalles)
+│   ├── step3.html               # Tercer paso (confirmación y pago)
+│   └── confirmation.html        # Página de confirmación final
+│
+├── server/                      # Lógica del servidor
+│   ├── config/                  # Configuraciones
+│   │   ├── database.js          # Configuración de base de datos
+│   │   └── maps.js              # Configuración API Mapas
+│   │
+│   ├── controllers/             # Controladores
+│   │   ├── quotesController.js  # Manejo de cotizaciones
+│   │   └── paymentsController.js# Manejo de pagos
+│   │
+│   ├── models/                  # Modelos de datos
+│   │   ├── Quote.js             # Modelo de cotización
+│   │   └── User.js              # Modelo de usuario (futuro)
+│   │
+│   ├── routes/                  # Rutas de la API
+│   │   ├── quotes.js            # Rutas para cotizaciones
+│   │   └── payments.js          # Rutas para pagos
+│   │
+│   └── app.js                   # Aplicación principal del servidor
+│
+├── .env                         # Variables de entorno
+├── package.json                 # Dependencias y scripts
+└── README.md                    # Documentación del proyecto

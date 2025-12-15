@@ -1,0 +1,385 @@
+
+
+
+¿Qué es una función y cómo se declara una función en JavaScript?
+respuesta: una funcion es un bloque de codigo que se ejecuta cuando se llama
+
+¿Para qué se usa return dentro de una función?
+respuesta: return es un valor que se devuelve de una funcion
+
+¿Qué es un error de lógica y cómo se diferencia de un error de sintaxis?
+respuesta: un error de logica es un error en el codigo que no se ejecuta correctamente, mientras que un error de sintaxis es un error en la sintaxis del codigo que no se ejecuta correctamente
+
+
+¿Qué es un array? ¿Y cómo accedes al tercer elemento?
+respuesta: un array es una lista de elementos, y para acceder al tercer elemento se usa el indice 2
+
+¿Qué son los métodos de un array? ¿Conoces algún método?
+respuesta: los metodos de un array son funciones que se pueden aplicar a los arrays, como push, pop, shift, unshift, etc
+
+
+¿Qué es un objeto en JavaScript y cómo se crea uno?
+respuesta: un objeto en JavaScript es un conjunto de propiedades y metodos
+
+
+¿Cómo se accede a los elementos de un array?
+respuesta: para acceder a los elementos de un array se usa el indice
+
+
+¿Cómo accedes a una propiedad de un objeto en JavaScript?
+respuesta: para acceder a una propiedad de un objeto en JavaScript se usa el nombre de la propiedad
+
+
+¿Qué significa que JavaScript es un lenguaje de tipado débil o dinámico?
+respuesta: que el tipo de dato se define en tiempo de ejecucion
+
+
+¿Qué es null y qué es undefined? ¿Cuál es la diferencia?
+respuesta: null es un valor que representa la ausencia de valor, mientras que undefined es un valor que representa que una variable no ha sido inicializada
+
+
+🖥️ Manipulación del DOM y eventos en JavaScript
+
+
+¿Cómo seleccionar un elemento del DOM en JavaScript?
+Respuesta: document.getElementById()
+
+¿Cómo seleccionas un elemento con el id "titulo" usando JavaScript?
+Respuesta: document.getElementById("titulo")
+
+¿Qué es el DOM y cómo se representa?
+
+respuesta: el DOM es un arbol de nodos que representa la estructura de una pagina web
+
+¿Qué hace el método document.querySelector() y cómo se usa?
+
+respuesta: document.querySelector() selecciona el primer elemento que coincida con el selector
+
+¿Cuál es la diferencia entre innerText, textContent y innerHTML?
+
+
+¿Cómo se crea un nuevo elemento desde JavaScript y se agrega al DOM?
+
+
+¿Qué hace appendChild() y cuándo se usa?
+
+
+¿Qué es un evento y cómo se agrega con addEventListener()?
+
+
+¿Qué función cumple preventDefault()? Da un ejemplo.
+
+
+¿Cómo se modifica el estilo de un elemento desde JavaScript?
+
+
+
+🌐 HTML y CSS
+¿Qué es HTML y CSS?
+
+
+¿Qué significa "especificidad" en CSS?
+
+
+¿Qué es la cascada en CSS y cómo se determina qué estilo se aplica?
+
+
+¿Cuál es la diferencia entre margin y padding en CSS?
+
+
+¿Qué hace la propiedad position: absolute y cómo se comporta respecto al padre?
+
+
+¿Qué hace la propiedad display: flex?
+
+
+¿Qué unidades existen en CSS y cuál es la diferencia entre px, em y %?
+
+
+¿Cuál es la diferencia entre id y class en CSS?
+
+
+¿Para qué se usa media queries en CSS? Da un ejemplo básico.
+
+
+
+📦 Git y GitHub
+¿Cuál es la diferencia entre Git y GitHub? ¿Cómo clonas un repositorio?
+
+
+¿Qué es el comando git merge y cuándo lo usarías?
+
+
+¿Cuál es la diferencia entre git add, git commit y git push?
+
+
+¿Qué es un commit y qué debe incluir su mensaje idealmente?
+
+
+¿Para qué se usa git clone?
+
+
+¿Cómo crear una nueva rama en Git? ¿Y cómo cambiarías a esa rama?
+
+
+¿Qué es un merge y cuándo podrías tener conflictos?
+
+
+¿Qué significa “hacer pull” en Git y qué comando se usa?
+
+
+¿Cómo conectas un repositorio local con uno remoto en GitHub?
+
+
+¿Qué es un .gitignore y qué tipo de archivos suele contener?
+
+
+¿Qué es un fork y cómo se diferencia de un clone?
+
+
+
+⚙️ Herramientas y entorno Node.js / npm
+
+
+¿Qué es npm y cuál es su función?
+
+
+¿Qué es Morgan?
+
+
+¿Qué es Node.js y para qué se usa?
+
+
+¿Qué es el archivo package.json y qué información contiene?
+
+
+¿Qué diferencia hay entre dependencias (dependencies) y dependencias de desarrollo (devDependencies)?
+
+
+¿Qué comando se usa para instalar una dependencia? ¿Y para eliminarla?
+
+
+¿Qué es el archivo package-lock.json?
+
+
+¿Para qué sirve npx y cómo se diferencia de npm?
+
+
+¿Qué hace el comando npm init?
+¿Qué es una función asincrónica (async) y cómo se declara?
+
+
+¿Qué es await y cómo se utiliza dentro de una función async?
+
+
+¿Qué es una promesa (Promise) y cómo funciona?
+
+
+¿Qué estados puede tener una promesa?
+
+
+¿Qué diferencia hay entre .then().catch() y async/await?
+
+
+¿Qué hace setTimeout() y por qué es considerado asincrónico?
+
+
+¿Qué pasa si se omite el await dentro de una función async?
+
+
+¿Qué es el event loop en JavaScript y cómo se relaciona con la asincronía?
+
+
+¿Cómo capturas errores en una función async usando try/catch?
+
+
+¿Cómo puedes ejecutar un archivo .js con Node.js desde la terminal?
+
+
+¿Qué significa que Node.js es “asincrónico y basado en eventos”?
+
+
+
+🛠️ Backend con Express.js
+¿Qué es Express.js?
+
+
+¿Qué es un middleware en Express y cómo funciona?
+
+
+¿Qué es req y res en un manejador de rutas?
+
+
+¿Qué son los códigos de estado HTTP? Menciona algunos ejemplos comunes.
+
+
+¿Qué métodos HTTP conoces y para qué se utilizan?
+
+
+¿Qué es JSON y por qué es común en las APIs?
+
+
+Define con tus palabras qué es una API.
+
+
+¿Qué es una ruta en Express y cómo se define?
+
+
+¿Cuál es la estructura básica de un servidor Express?
+¿Qué es eso de un endpoint en las APIs
+
+
+¿Qué diferencia hay entre app.get() y app.post()?
+
+
+¿Qué es y para qué sirve req.params y req.query en una ruta?
+
+
+¿Qué diferencia hay entre res.send() y res.json()?
+
+
+¿Qué es app.use() y cuándo se utiliza?
+
+
+¿Qué es un manejador de errores en Express y cómo se estructura?
+
+
+¿Cómo puedes crear un middleware personalizado en Express?
+
+
+¿Por qué es útil el código de estado HTTP 201?
+
+
+¿Para qué se utiliza un modelo (schema) en Mongoose?
+
+
+¿Qué debe devolver una API al eliminar correctamente un recurso?
+
+
+¿Qué significa CRUD y qué representa cada letra?
+
+
+¿Cuál es la diferencia entre PUT y PATCH?
+
+
+¿Qué método HTTP se usa para obtener información?
+
+
+¿Qué método HTTP se usa para eliminar un recurso?
+
+
+¿Cómo se implementa un endpoint para crear un recurso con Express?
+
+
+¿Qué función tiene el método res.json() en una API?
+
+
+¿Qué hace req.body en Express?
+
+
+¿Qué método HTTP se usa normalmente para actualizar datos?
+
+
+
+⚛️ React
+¿Qué es JSX? ¿Es obligatorio usarlo?
+
+
+¿Qué es el Virtual DOM en React?
+
+
+¿Qué son las "props" en React?
+
+
+¿Cuál es la diferencia entre el state y las props en React?
+
+
+¿Qué es useState en React?
+
+
+¿Qué hace useEffect y cuándo se ejecuta?
+
+
+¿Qué es el renderizado condicional?
+
+
+¿Qué es un "component" en React?
+
+
+¿Para qué se usa key cuando se renderizan listas?
+
+
+¿Qué son las Single Page Applications (SPA) y cómo funcionan en React?
+
+
+¿Qué es React Router y para qué sirve?
+
+
+
+🎨 Librerías de estilos / Bootstrap
+¿Qué es Bootstrap y qué es React?
+
+
+¿Cómo funciona el sistema de grillas (grid system) en Bootstrap?
+
+
+¿Cuál es la diferencia entre container, container-fluid y container-{breakpoint}?
+
+
+¿Qué hace la clase d-flex en Bootstrap?
+
+
+¿Qué es un breakpoint en Bootstrap y por qué es importante?
+
+
+¿Para qué se usa la clase btn btn-primary y cómo puedes cambiar el color del botón?
+
+
+¿Cómo se aplican los márgenes y paddings en Bootstrap con clases utilitarias? Da un ejemplo.
+
+🛠️ Backend con Mongo DB
+¿Qué es MongoDB y qué tipo de base de datos es?
+
+
+¿Qué es un documento en MongoDB?
+
+
+¿Qué es una colección en MongoDB?
+
+
+¿Cuál es la diferencia entre una colección y una tabla en bases de datos relacionales?
+
+
+¿Qué es MongoDB Compass y para qué se usa?
+
+
+¿Qué formato usan los documentos en MongoDB?
+
+
+¿Cómo se conecta una aplicación Node.js a MongoDB?
+
+
+¿Qué es Mongoose y para qué se utiliza?
+
+
+¿Qué significa que MongoDB es NoSQL?
+
+
+¿Cuál es la diferencia entre insertOne() y insertMany() en MongoDB?
+
+
+¿Qué función cumple _id en los documentos de MongoDB?
+
+
+¿Qué hace el método find() en MongoDB?
+
+
+¿Cuál es la función del método updateOne() en MongoDB?
+
+
+¿Para qué se usa deleteOne()?
+
+
+¿Qué diferencia hay entre find() y findOne()?
+
+

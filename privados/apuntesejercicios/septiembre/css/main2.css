@@ -1,0 +1,26 @@
+.color {
+    color: blue;
+}
+
+.color2 {
+    color: red;
+}
+
+.estilo {
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    background-color: lightgrey;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px grey;
+    color: green;
+}
+
+#titulo {
+    color: rosybrown;
+    text-align: center;
+    
+}

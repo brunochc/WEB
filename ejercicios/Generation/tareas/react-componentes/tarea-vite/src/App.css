@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
+                    radial-gradient(gray 2px, transparent 0);
+  background-size: 30px 30px, 30px 30px;
+  font-family: 'Manjari', sans-serif;
+}
+
+/* header  */
+.title h1{
+  padding:20px 0;
+  text-align: center;
+  font-size: 2.9em;
+}
+
+.container {
+  background-color: white;
+  width: 90%;
+  max-width: 1000px;
+  margin: 1.6em auto;
+
+  display: grid;
+  gap:1.6em;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+.container > div {
+  background-color: white;
+  padding: 20px;
+  border : 1px solid #000;
+}
+
+.container .header,
+.container .footer {
+  grid-column: 1/6;
+  background-color: #1e272e;
+  color: white;
+}
+
+.container .content {
+  grid-column: span 3;
+}
+
+.content > .article {
+  background-color: #808e90;
+  padding: 20px;
+  margin-top: 5px;
+  color: #dfe6e9;
+}
+
+.content .article h2,
+.content .article p {
+  padding: 10px;
+}
+
+
+.container .sidebar img{
+  width: 100%;
+  margin-top: 5px;
+}
+
+.container > .sidebar {
+  grid-column: span 2;
+  background-color: #485460;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container > .related-post {
+  background-color: #2d3436;
+  color: white;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.container > .related-post:hover{
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+}
+
+
+@media screen and (max-width:768px) {
+  .header {
+      text-align: center;
+  }
+
+  .container .content {
+      grid-column: 1/-1;
+  }
+
+  .container .sidebar {
+      grid-column: 1/6;
+  }
+
+  .container .related-post {
+      grid-column: 1/6;
+  }
+
+
+}

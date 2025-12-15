@@ -1,0 +1,33 @@
+dom
+
+document object model
+representacion de la pagina enun arbol envarios nodos
+javascript
+
+js usa dom para encontrar elementos especificos o sus atributos como el ID y luego modificarlos dependiendo del metodo
+document.getElementbyid para encontrar el elemento con el atributo
+document.getElementbyid
+
+ejemplo document.location= entrega info como donde esta ubicado el documento
+
+javascript usa el dom para acceder, para interactuar.
+
+
+arbol dom basico
+
+la raiz es el nodo princiopal
+cada seccion es un nodo 
+    todos tienen un padre excepto el nodo raiz
+
+1<html>(root element)
+
+    1.1<head>(primer hijo)
+        1.1.1<title>1.1.1.1Titulo(hijodelhijodelhijo)</title>
+        1.1.1<link></link>  (hijas de head) 
+    </head>
+    
+    1.1<body>
+        1.1.1<h1><h1/>
+    </body>
+
+1<html/>

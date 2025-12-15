@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Médica Expandible</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f7f9;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            border-bottom: none;
+        }
+        
+        .card-content {
+            max-height: 300px; /* Altura inicial compacta */
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .card-content.expanded {
+            max-height: 2000px; /* Altura suficiente para mostrar todo */
+        }
+        
+        .detail-section {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .detail-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            padding: 0.35rem 0.65rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .badge.ok {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .med-row, .doc-icon-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .pill-icon, .doc-icon {
+            width: 36px;
+            height: 36px;
+            background-color: #f0f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .view-prescription {
+            margin-top: 10px;
+            border-color: #3a7bd5;
+            color: #3a7bd5;
+        }
+        
+        .view-prescription:hover {
+            background-color: #3a7bd5;
+            color: white;
+        }
+        
+        .toggle-btn {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 15px auto;
+        }
+        
+        .toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .toggle-btn .icon {
+            transition: transform 0.5s ease;
+        }
+        
+        .toggle-btn.expanded .icon {
+            transform: rotate(180deg);
+        }
+        
+        .exam-list, .medication-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .exam-list li, .medication-list li {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline-container">
+        <div class="timeline-column">
+            <div class="card">
+                <div class="card-header p-4 text-center">
+                    <h3 class="page-title mb-0">Mi Timeline Médico</h3>
+                </div>
+                
+                <div class="card-content p-4" id="cardContent">
+                    <div class="consultation-type">
+                        <h4 class="detail-title">Consulta especialista: Cardiologo</h4>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Motivo de la consulta:</h4>
+                        <p>El paciente presentaba dolor torácico, dolor de cabeza y fiebre.</p>
+                    </div>
+                    
+                    <div class="detail-section d-flex align-items-center gap-3">
+                        <h4 class="detail-title">Fecha:</h4>
+                        <p class="badge">15 Ago 2024 12:00 pm</p>
+                    </div>
+                    
+                    <div class="detail-section d-flex align-items-center gap-3">
+                        <h4 class="detail-title">Estado:</h4>
+                        <p class="badge ok">Completada</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Centro Médico:</h4>
+                        <p>Hospital Barros Luco Trudeau</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Nombre especialista:</h4>
+                        <p>Dr. Juan Pérez</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Diagnóstico:</h4>
+                        <p>El paciente presentaba dolor torácico, dolor de cabeza y fiebre, por lo que se le diagnosticó una infección respiratoria aguda.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Evolución:</h4>
+                        <p>El paciente evolucionó bien, tuvo un control de 15 días, donde la fiebre se controló adecuadamente.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Medicamentos:</h4>
+                        <div class="med-row">
+                            <div class="pill-icon">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <div>
+                                <p class="mb-1"><strong>Paracetamol 500mg</strong></p>
+                                <p class="mb-0 text-muted">Tomar cada 8 horas durante 5 días</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Receta:</h4>
+                        <ul class="medication-list">
+                            <li class="mb-2">Paracetamol 500mg - Tomar cada 8 horas por 5 días</li>
+                            <li class="mb-2">Ibuprofeno 400mg - Tomar cada 12 horas por 3 días</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary view-prescription">Ver receta completa</a>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4 class="detail-title">Indicación de exámenes:</h4>
+                        <ul class="exam-list">
+                            <li class="doc-icon-container">
+                                <div class="doc-icon">
+                                    <i class="fas fa-file-medical"></i>
+                                </div>
+                                <div>
+                                    <a href="#" class="text-decoration-none">Examen de sangre</a>
+                                    <p class="text-muted mb-0">Resultados disponibles</p>
+                                </div>
+                            </li>
+                            <li class="doc-icon-container">
+                                <div class="doc-icon">
+                                    <i class="fas fa-file-medical"></i>
+                                </div>
+                                <div>
+                                    <a href="#" class="text-decoration-none">Examen de orina</a>
+                                    <p class="text-muted mb-0">Pendiente de realización</p>
+                                </div>
+                            </li>
+                            <li class="doc-icon-container">
+                                <div class="doc-icon">
+                                    <i class="fas fa-file-medical"></i>
+                                </div>
+                                <div>
+                                    <a href="#" class="text-decoration-none">Electrocardiograma</a>
+                                    <p class="text-muted mb-0">Programado para 22 Ago</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center p-3">
+                    <button class="toggle-btn" id="toggleButton">
+                        <span>Ver más detalles</span>
+                        <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggleButton');
+            const cardContent = document.getElementById('cardContent');
+            
+            toggleButton.addEventListener('click', function() {
+                cardContent.classList.toggle('expanded');
+                toggleButton.classList.toggle('expanded');
+                
+                if (cardContent.classList.contains('expanded')) {
+                    toggleButton.innerHTML = '<span>Ver menos</span> <span class="icon"><i class="fas fa-chevron-up"></i></span>';
+                } else {
+                    toggleButton.innerHTML = '<span>Ver más detalles</span> <span class="icon"><i class="fas fa-chevron-down"></i></span>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

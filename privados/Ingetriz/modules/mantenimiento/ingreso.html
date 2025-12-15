@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Servicio - Ingetriz</title>
+    <link rel="stylesheet" href="../../css/gt1-style.css">
+    <link rel="stylesheet" href="../../css/modules.css">
+</head>
+<body>
+    <div class="gt-container module-container">
+        <div class="module-header">
+            <h1 class="gt-title">Registro de Servicio de Mantenimiento</h1>
+            <h2 class="gt-subtitle">Complete los datos del vehículo y servicio</h2>
+        </div>
+        
+        <form class="service-form">
+            <div class="form-group">
+                <label for="placa">Placa del Vehículo</label>
+                <input type="text" id="placa" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="cliente">Nombre del Cliente</label>
+                <input type="text" id="cliente" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="servicio">Tipo de Servicio</label>
+                <select id="servicio" required>
+                    <option value="">Seleccione...</option>
+                    <option value="preventivo">Mantenimiento Preventivo</option>
+                    <option value="correctivo">Mantenimiento Correctivo</option>
+                    <option value="cambio_aceite">Cambio de Aceite</option>
+                    <option value="frenos">Revisión de Frenos</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha">Fecha Programada</label>
+                <input type="date" id="fecha" required>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="gt-button action-button">
+                    Guardar Servicio
+                </button>
+                
+                <a href="index.html" class="gt-button back-button">
+                    Volver al Menú
+                </a>
+                
+                <a href="../../index.html" class="gt-button home-button">
+                    Ir al Inicio
+                </a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="../../js/modules/mantenimiento.js"></script>
+</body>
+</html>

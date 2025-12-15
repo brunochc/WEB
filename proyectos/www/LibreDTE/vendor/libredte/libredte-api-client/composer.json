@@ -1,0 +1,35 @@
+{
+    "name": "libredte/libredte-api-client",
+    "description": "Cliente para realizar la integración con los servicios web de LibreDTE desde PHP.",
+    "type": "library",
+    "keywords": ["api", "dte", "sii", "facturación electrónica", "chile"],
+    "homepage": "https://www.libredte.cl",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "LibreDTE",
+            "homepage": "https://www.libredte.cl"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/LibreDTE/libredte-api-client-php/issues",
+        "source": "https://github.com/LibreDTE/libredte-api-client-php"
+    },
+    "config": {
+        "platform": {
+            "php": "7.3"
+        }
+    },
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "^2.9",
+        "phpunit/phpunit": "^9.2",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {"libredte\\api_client\\": "src/"}
+    }
+}

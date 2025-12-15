@@ -1,0 +1,101 @@
+protocolo de comunicacion en la web: HTTP, el backend es un directorio aparte, el frontend es el directorio que representa la aplicacion web, la interfaz de usuario.
+
+El backend es el servidor que proporciona los datos y funcionalidades a la aplicacion web.
+El frontend es el cliente que consume los datos y funcionalidades del backend.
+
+El backend se encarga de la logica de negocio, la base de datos, la autenticacion, la autorizacion, la seguridad, la escalabilidad, la performance, la compatibilidad con diferentes tipos de dispositivos y navegadores.
+
+js, go, python, java, ruby, php, c#(se pueden usar para backend )
+
+el back y el fron deben entender HTTP, entra en juego un concepto llamado API, (aplication programing interface)
+ 
+ es una serie de reglas y protocolos para permitir la comunicacion entre dos o mas sistemas
+
+ 1.
+ https://www.apiaddicts.org/guia-de-apis-para-principiantes/
+
+ api rest, la diferencia con el rest es que rest es un estilo de arquitectura, como se muestra la informacion, como se puede acceder a los datos, toda la informacion es un recurso.
+
+ peticion de lista de posts:
+ http://appserver.com/api/posts
+
+ GET /posts
+
+peticion de un post:
+http://appserver.com/api/posts/56
+
+GET /posts/56
+
+GET: peticion de lectura, ruta:/posts/:id
+
+POST: peticion de creacion
+crear post: http://appserver.com/api/createpost
+El backend recibe los datos y los procesa, en una url en particular.
+configuradas en el backend.
+ruta para publicaciones: /posts
+
+
+PUT: peticion de actualizacion(todo el recurso)
+actualizar post: http://appserver.com/api/updatepost/56
+
+PATH: peticion de actualizacion(parte del recurso)
+actualizar post: http://appserver.com/api/updatepost/56 
+
+DELETE: peticion de eliminacion
+delete post: http://appserver.com/api/deletepost/56
+
+2. 
+CRUD (Create, Read, Update, Delete).
+
+create: crear recurso
+read: leer recurso
+update: actualizar recurso
+delete: eliminar recurso
+
+equivalencias http: create=POST, read=GET, update=PUT, delete=DELETE
+
+codigos de respuesta http: 200, 201, 204, 400, 404, 500
+
+200: ok, todo bien
+201: creado, recurso creado
+202: accepted, recurso aceptado
+204: no contenido, no hay contenido
+400: bad request, errores en el cliente
+401: unauthorized, no autorizado
+403: forbidden, prohibido
+404: not found, no encontrado
+500: internal server error, error en el servidor
+501: not implemented, no implementado
+502: bad gateway, error en el gateway
+503: service unavailable, servicio no disponible
+504: gateway timeout, timeout en el gateway
+505: http version not supported, version de http no soportada
+
+cada framework tiene su propia forma de implementar estas peticiones. ejemplo: express.js
+
+express.js es un framework de node.js que permite crear aplicaciones web y apis.
+
+unopinioated, minimalist web fremwork
+
+nestjs es un framework de node.js que permite crear aplicaciones web y apis.
+
+la diferencia con express.js es que nestjs es un framework de node.js que permite crear aplicaciones web y apis.
+
+uso de middleware:
+morgan --> para ver las peticiones
+nodemon --> para reiniciar el servidor
+
+
+para ejecutar en entorno de desarrollo
+Quick fixes
+Use npx (recommended):
+npx nodemon index.js
+Add an npm script in package.json and run npm run dev:
+In package.json add:
+json
+{
+  "scripts": {
+    "dev": "nodemon index.js"
+  }
+}
+Then run: npm run dev

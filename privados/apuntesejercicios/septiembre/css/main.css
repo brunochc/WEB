@@ -1,0 +1,92 @@
+
+body {
+    background-color: #82888d;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+    padding: 0;
+}
+
+div.contenedor {
+    margin: 20px auto; /* centrado horizontal */
+    padding: 30px;
+    background: linear-gradient(135deg, #d2defd 0%, #a8c6ff 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+div.contenedor h1 {
+    color: #2c3e50;           
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 3em;           
+    text-align: center;       
+    margin-bottom: 20px;   
+    border-bottom: 3px solid #3498db; 
+    padding-bottom: 10px;    
+    text-shadow: 2px 2px 4px #aaa; 
+    margin-top: 20px;        
+}
+
+div.contenedor p {
+    color: #34495e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 1.8;
+    background-color: rgba(221, 235, 253, 0.3);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #082e47;
+}
+
+#titulo2 {
+    color: #2c3e50;           
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2.5em;         
+    text-align: center;       
+    margin-bottom: 15px;     
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 8px;     
+    text-shadow: 1px 1px 3px #aaa; 
+    margin-top: 15px;        
+}
+
+.color {
+    color: #2c3e50;
+    transition: color 0.3s ease; /* Transición suave */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.color:hover {
+    color: rgba(54, 155, 8, 0.3);
+    /*color: #e74c3c; /* Cambia color al pasar el mouse */
+    background-color: #f8f9fa;
+}
+
+.alineacion {
+    text-align: center;
+    text-justify: inter-word;
+
+}
+img {
+    display: block;
+    margin: 20px auto; /* centrado horizontal */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#boton {
+    display: block;
+    margin: 20px auto; /* centrado horizontal */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

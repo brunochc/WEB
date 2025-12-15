@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización - Paso 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/steps.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">FletesExpress RM</div>
+            <div class="step-indicator">
+                <div class="step" data-step="1">1. Inicio</div>
+                <div class="step active" data-step="2">2. Detalles</div>
+                <div class="step" data-step="3">3. Confirmación</div>
+            </div>
+        </header>
+
+        <main class="step-container">
+            <!-- Contenido de step2 -->
+            <div class="card">
+                <h2>Detalles del Envío</h2>
+                <form id="quote-form">
+                    <!-- Formulario de cotización -->
+                </form>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2023 FletesExpress RM</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/step2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>

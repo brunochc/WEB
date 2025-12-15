@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Elegante - Restaurante</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sabor Elegante</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reservations">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-1 fw-bold">Sabor Elegante</h1>
+            <p class="lead mb-4">Experiencia gastronómica de lujo con los sabores más exquisitos</p>
+            <a href="#reservations" class="btn btn-primary btn-lg">Reserva ahora</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Nuestra Historia</h2>
+                    <p>Desde 1998, Sabor Elegante ha sido sinónimo de excelencia culinaria. Nuestro chef ejecutivo,
+                        Antonio Rivera, combina técnicas tradicionales con innovación para crear platos que deleitan
+                        todos los sentidos.</p>
+                    <p>Utilizamos ingredientes frescos y de temporada, provenientes de productores locales que comparten
+                        nuestro compromiso con la calidad y la sostenibilidad.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+                        alt="Interior del restaurante" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nuestro Menú</h2>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                            class="card-img-top" alt="Ensalada Mediterránea">
+                        <div class="card-body">
+                            <h5 class="card-title">Ensalada Mediterránea</h5>
+                            <p class="card-text">Mezcla de lechugas, olivas, queso feta, tomate cherry y aderezo de
+                                limón.</p>
+                            <p class="price">$12.900</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl6emF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                            class="card-img-top" alt="Pizza Trufada">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza Trufada</h5>
+                            <p class="card-text">Base fina con mozzarella de búfala, trufa negra, champiñones y rúcula.
+                            </p>
+                            <p class="price">$18.500</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBhc3RhfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+                            class="card-img-top" alt="Pasta Fresca">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasta Fresca</h5>
+                            <p class="card-text">Tagliatelle casera con langostinos, espárragos y salsa de azafrán.</p>
+                            <p class="price">$16.750</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN0ZWFrfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+                            class="card-img-top" alt="Filete Angus">
+                        <div class="card-body">
+                            <h5 class="card-title">Filete Angus</h5>
+                            <p class="card-text">Corte premium de 250g con patatas asadas y verduras de temporada.</p>
+                            <p class="price">$24.900</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                            class="card-img-top" alt="Postre Chocolate">
+                        <div class="card-body">
+                            <h5 class="card-title">Torrija de Chocolate</h5>
+                            <p class="card-text">Torrija caramelizada con helado de vainilla y salsa de chocolate
+                                caliente.</p>
+                            <p class="price">$8.500</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29ja3RhaWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                            class="card-img-top" alt="Bebida especial">
+                        <div class="card-body">
+                            <h5 class="card-title">Cóctel Signature</h5>
+                            <p class="card-text">Nuestra exclusiva combinación de ginebra, licor de saúco y cítricos.
+                            </p>
+                            <p class="price">$10.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Reserva tu Mesa</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <form class="p-4 shadow-sm rounded bg-white">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="date" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="time" class="form-label">Hora</label>
+                                <input type="time" class="form-control" id="time" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guests" class="form-label">Número de comensales</label>
+                            <select class="form-select" id="guests" required>
+                                <option value="1">1 persona</option>
+                                <option value="2" selected>2 personas</option>
+                                <option value="3">3 personas</option>
+                                <option value="4">4 personas</option>
+                                <option value="5">5 personas</option>
+                                <option value="6">6 personas</option>
+                                <option value="7">7+ personas (mesa grande)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="requests" class="form-label">Peticiones especiales</label>
+                            <textarea class="form-control" id="requests" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Reservar ahora</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Sabor Elegante</h5>
+                    <p>Ofreciendo la mejor experiencia gastronómica desde 1998.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Av. Alameda, 123, Santiago</p>
+                    <p><i class="fas fa-phone me-2"></i> +34 91 555 1234</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@saborelegante.com</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div class="d-flex social-icons">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <p>Horario:</p>
+                        <p>Lunes a Sábado: 13:00 - 16:00 / 20:00 - 00:00</p>
+                        <p>Domingo: 13:00 - 17:00</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Sabor Elegante. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

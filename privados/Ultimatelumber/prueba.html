@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulumber</title>
+    <style>
+        /* Estilos generales */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        scroll-snap-type: y mandatory; /* Scroll suave entre secciones */
+        overflow-y: scroll;
+        overflow-x: hidden; /* Evita el scroll horizontal */
+        box-sizing: border-box;
+        font-size: clamp(1rem, 1vw, 2rem); /* Ajusta el tamaño de la fuente de manera proporcional */
+    }
+
+    /* Header y Footer */
+    header, footer {
+        background-color: #333;
+        color: white;
+        width: 100%;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    header h1 {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: box-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Secciones */
+    .section {
+        padding: 0; /* Eliminamos el padding para evitar márgenes no deseados */
+        margin: 0;
+        border-radius: 8px;
+        background-color: rgb(65, 62, 62);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh; /* Cambiamos height a min-height para un ajuste completo */
+        width: 100%;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        font-size: 1.8em;
+        position: relative;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        scroll-snap-align: start;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .section .content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch; /* Asegura que los elementos hijos ocupen toda la altura disponible */
+        padding: 20px; /* Añadimos padding aquí en lugar de en .section */
+        box-sizing: border-box;
+        flex-wrap: wrap; /* Permite el ajuste automático del contenido dentro de la sección */
+        height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la sección */
+    }
+
+    .section .content .text {
+        width: 50%;
+        height: 100%; /* Asegura que el contenedor de texto ocupe toda la altura disponible */
+        text-align: left; /* Alinea el texto a la izquierda */
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos hijos se apilen verticalmente */
+        justify-content: flex-start; /* Alinea los elementos hijos al inicio del contenedor */
+        padding: 20px; /* Añade padding para el contenido del texto */
+        box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+        font-size: clamp(1rem, 2vw, 1.5rem); /* Ajusta el tamaño del texto */
+    }
+
+
+
+    .section .content .image-container {
+        width: 50%;
+        height: 100%; /* Asegura que el contenedor de la imagen ocupe toda la altura disponible */
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section .content .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 2s ease-in-out;
+    }
+
+    .section .content .image-container img.hidden {
+        opacity: 0;
+    }
+
+    /* Estilos específicos para cada sección */
+    .home {
+        background: url('https://www.ulumber.cl/pictures/madera/img001.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .projects .content, .furniture .content, .contact .content, .location, .gallery .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center; /* Asegura que los elementos hijos ocupen toda la altura disponible */
+    }
+    .contact .content  {
+        width:100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center; /* Asegura que los elementos hijos ocupen toda la altura disponible */
+
+    }
+    .contact .content .text{
+        width: 50%;
+        max-height: fit-content;
+    }
+
+    .contact .content .contact-content {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center; /* Asegura que los elementos hijos ocupen toda la altura disponible */
+        
+    }
+
+    .contact .content .social-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center; /* Asegura que los elementos hijos ocupen toda la altura disponible */
+    }
+    .location .text{
+        width: 100%;
+        max-height: 50%; /* Asegura que el contenedor de texto ocupe toda la altura disponible */
+        text-align: center; /* Alinea el texto a la izquierda */
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos hijos se apilen verticalmente */
+        justify-content: flex-start; /* Alinea los elementos hijos al inicio del contenedor */
+        padding: 20px; /* Añade padding para el contenido del texto */
+        box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+        font-size: clamp(1rem, 2vw, 1.5rem); /* Ajusta el tamaño del texto */
+        position: relative;
+    }
+
+    .projects .content .image-container, .furniture .content .image-container, .gallery .content .image-container {
+        width: 50%;
+        height: 100%; /* Asegura que el contenedor de la imagen ocupe toda la altura disponible */
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .location .location-content{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        z-index: 1; 
+        display: flex;
+
+    }
+        
+    .projects .content .image-container img, .furniture .content .image-container img, .gallery .content .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 2s ease-in-out;
+    }
+
+    .projects .content .image-container img.hidden, .furniture .content .image-container img.hidden, .gallery .content .image-container img.hidden {
+        opacity: 0;
+    }
+
+    .contact, .location, .gallery {
+        background-color: #2d2d2d;
+    }
+
+    
+    .social-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-container a {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #25D366;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .social-container a:hover {
+        background-color: #128C7E;
+    }
+
+    .map {
+        width: 100%; /* Ajusta el ancho al 50% */
+       height: 100%; /* Ajusta la altura al 50% */
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 20px; /* Añade padding para el contenido */
+        box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+    }
+    .location .text .address {
+        width: 100%; /* Ajusta el ancho al 50% */
+       height: 100%; /* Ajusta la altura al 50% */
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 20px; /* Añade padding para el contenido */
+        box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input, form textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    form button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #1a3d5d;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #3b6b4c;
+    }
+
+    /* Ajuste del diseño para pantallas pequeñas */
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: block;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .menu-toggle:hover {
+            background-color: #444;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            width: 100%;
+        }
+
+        .menu a {
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        .menu a:hover {
+            background-color: #444;
+        }
+
+        .projects .content, .furniture .content, .contact .content, .location .content, .gallery .content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact .content .social-container,  .contact .content .text {
+            width: 50%;
+            height: 50%;
+        }
+        .projects .content .text, .projects .content .image-container,
+        .furniture .content .text, .furniture .content .image-container,
+        .contact .content .contact-content, 
+        .location .content .text, .location .content .map,
+        .gallery .content .text, .gallery .content .image-container {
+            width: 100%;
+            height: 50%;
+        }
+        
+
+        .projects .content .image-container, .furniture .content .image-container, .location .content .map,
+        .gallery .content .image-container, .contact .content .contact-content .text {
+            height: 50%; /* Ajusta la altura según sea necesario */
+        }
+
+        .home .text, .home .image-container,
+        .projects .content .text, .projects .content .image-container,
+        .furniture .content .text, .furniture .content .image-container, .contact .content .text, .gallery .content .image-container {
+            width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            height: 50vh; /* Ocupa toda la altura de la pantalla */
+        }
+
+        .home .text {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home .carousel {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel {
+            display: block;
+            height: 50vh; /* Ajusta la altura del carrusel */
+            width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
+        }
+
+        .carousel .image-container {
+            height: 100%; /* Asegura que el contenedor de la imagen ocupe toda la altura */
+            width: 100%; /* Asegura que el contenedor de la imagen ocupe todo el ancho */
+        }
+
+        .carousel .image-container img {
+            height: 100%; /* Asegura que la imagen ocupe toda la altura */
+            width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+            object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+        }
+    }
+    </style>
+        <script>
+            const welcomeImages = [
+                'https://www.ulumber.cl/pictures/madera/img001.jpg'
+            ];
+
+            const projectImages = [
+                'https://www.ulumber.cl/pictures/construccion/img001.jpeg',
+                'https://www.ulumber.cl/pictures/construccion/img002.jpeg',
+                'https://www.ulumber.cl/pictures/construccion/img003.jpeg',
+                'https://www.ulumber.cl/pictures/construccion/img004.jpeg',
+                'https://www.ulumber.cl/pictures/construccion/img005.jpeg'
+            ];
+
+        const furnitureImages = [
+            'https://www.ulumber.cl/pictures/decomuebles/image1.jpg',
+            'https://www.ulumber.cl/pictures/decomuebles/image2.jpg',
+            'https://www.ulumber.cl/pictures/decomuebles/image3.jpg',
+            'https://www.ulumber.cl/pictures/decomuebles/image4.jpg',
+            'https://www.ulumber.cl/pictures/decomuebles/image5.jpg'
+        ];
+
+        const galleryImages = [
+            'https://www.ulumber.cl/pictures/galeria/img001.jpg',
+            'https://www.ulumber.cl/pictures/galeria/img002.jpg',
+            'https://www.ulumber.cl/pictures/galeria/img003.jpg',
+            'https://www.ulumber.cl/pictures/galeria/img004.jpg',
+            'https://www.ulumber.cl/pictures/galeria/img005.jpg'
+        ];
+
+        let currentWelcomeImageIndex = 0;
+        let currentProjectImageIndex = 0;
+        let currentFurnitureImageIndex = 0;
+        let currentGalleryImageIndex = 0;
+
+        function changeImage(sectionId, images, currentIndex) {
+            const section = document.getElementById(sectionId);
+            const imageContainer = section.querySelector('.image-container');
+            const imagesElements = imageContainer.querySelectorAll('img');
+            imagesElements.forEach((img, index) => {
+                img.classList.toggle('hidden', index !== currentIndex);
+            });
+
+            return (currentIndex + 1) % images.length;
+        }
+
+        function cycleImages() {
+            currentWelcomeImageIndex = changeImage('home', welcomeImages, currentWelcomeImageIndex);
+            currentProjectImageIndex = changeImage('projects', projectImages, currentProjectImageIndex);
+            currentFurnitureImageIndex = changeImage('furniture', furnitureImages, currentFurnitureImageIndex);
+            currentGalleryImageIndex = changeImage('gallery', galleryImages, currentGalleryImageIndex);
+        }
+
+        window.onload = function() {
+            cycleImages();
+            setInterval(cycleImages, 7500);
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            menuToggle.addEventListener('click', () => {
+                menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+            });
+        };
+
+        function sendEmail(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const mailtoLink = `mailto:contacto@ulumber.cl?subject=${encodeURIComponent(formData.get('name'))}&body=${encodeURIComponent(formData.get('message'))}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Ultimate lumber</h1>
+        <nav class="menu">
+            <a href="#home">Inicio</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#furniture">Muebles</a>
+            <a href="#contact">Contacto</a>
+            <a href="#location">Ubicación</a>
+            <a href="#gallery">Galería</a>
+        </nav>
+        <div class="menu-toggle">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" alt="Menú" style="width: 30px; height: 30px;">
+        </div>
+    </header>
+    <div class="section home" id="home">
+        <div class="content">
+            <div class="text">
+                <h2>Bienvenido a Maderas y más</h2>
+                <p>Tu destino para productos de madera de alta calidad. Encuentra todo lo que necesitas para tus proyectos.</p>
+            </div>
+            <div class="image-container">
+                <img src="https://www.ulumber.cl/pictures/madera/img001.jpg" alt="Bienvenida">
+            </div>
+        </div>
+    </div>
+    <div class="section projects" id="projects">
+        <div class="content">
+            <div class="text">
+                <h2>Proyectos</h2>
+                <p>Te ayudamos a conseguir todo lo necesario para tu proyecto, desde la madera hasta los acabados finales. Contáctanos para más información.</p>
+            </div>
+            <div class="image-container">
+                <img src="https://www.ulumber.cl/pictures/construccion/img001.jpeg" alt="Proyecto 1">
+                <img src="https://www.ulumber.cl/pictures/construccion/img002.jpeg" alt="Proyecto 2" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/construccion/img003.jpeg" alt="Proyecto 3" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/construccion/img004.jpeg" alt="Proyecto 4" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/construccion/img005.jpeg" alt="Proyecto 5" class="hidden">
+            </div>
+        </div>
+    </div>
+    <div class="section furniture" id="furniture">
+        <div class="content">
+            <div class="text">
+                <h2>Muebles</h2>
+                <p>Fabricamos muebles de alta calidad con diseños únicos para tu hogar. Personaliza tus espacios con nuestros productos.</p>
+                <p>Utilizamos maderas nativas para crear piezas únicas que destacan por su belleza y durabilidad. Cada mueble es una obra de arte que aporta calidez y elegancia a tu hogar.</p>
+            </div>
+            <div class="image-container">
+                <img src="https://www.ulumber.cl/pictures/decomuebles/image1.jpg" alt="Mueble 1">
+                <img src="https://www.ulumber.cl/pictures/decomuebles/image2.jpg" alt="Mueble 2" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/decomuebles/image3.jpg" alt="Mueble 3" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/decomuebles/image4.jpg" alt="Mueble 4" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/decomuebles/image5.jpg" alt="Mueble 5" class="hidden">
+            </div>
+        </div>
+    </div>
+    <div class="section contact" id="contact">
+        <div class="content">
+            <div class="text">
+                <h2>Contacto</h2>
+                <p>Puedes contactarnos por correo electrónico o a través de redes sociales.</p>
+            </div>    
+            <div class="contact-content">
+                <div class="form-container">
+                    <form onsubmit="sendEmail(event)">
+                        <input type="text" name="name" placeholder="Tu nombre" required>
+                        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                        <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            <div class="social-container">
+                <a href="https://wa.me/56928156161" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; height: 24px;">
+                </a>
+            </div>
+            </div>                
+        </div>
+    </div>
+    <div class="section location" id="location">
+        <div class="text">
+            <h2>Ubicación</h2>
+            <div class="address">
+                <p class="street">Avenida Miguel Letelier, 3A-2</p>
+                <p class="commune">Sector Mansel, Comuna de Paine</p>
+                <p class="country">RM, Chile</p>
+            </div>
+        </div>
+        <div class="location-content">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207.09714720131706!2d-70.78210658254092!3d-33.84960160004468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96632303a6756c45%3A0x9882dfc625f59ae!2sUlumber!5e0!3m2!1ses-419!2sus!4v1736276592779!5m2!1ses-419!2sus" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="section gallery" id="gallery">
+        <div class="content">
+            <div class="text">
+                <h2>Galería</h2>
+                <p>Explora nuestra galería de imágenes para inspirarte en tus próximos proyectos con madera.</p>
+            </div>
+            <div class="image-container">
+                <img src="https://www.ulumber.cl/pictures/galeria/img001.jpeg" alt="Galería 1">
+                <img src="https://www.ulumber.cl/pictures/galeria/img002.jpeg" alt="Galería 2" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/galeria/img003.jpeg" alt="Galería 3" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/galeria/img004.jpeg" alt="Galería 4" class="hidden">
+                <img src="https://www.ulumber.cl/pictures/galeria/img005.jpeg" alt="Galería 5" class="hidden">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ultimate Lumber. Todos los derechos reservados.</p>
+    </footer>
+</body>

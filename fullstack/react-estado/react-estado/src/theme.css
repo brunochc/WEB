@@ -1,0 +1,101 @@
+/* Variables base del tema (midnight purple) */
+:root {
+  /* Colores principales */
+  --purple-900: #1b102e;
+  --purple-800: #24123a;
+  --purple-700: #2e1550;
+  --purple-600: #3a1b6b;
+  --purple-500: #5b2aa9;
+  --purple-400: #7a49c8;
+  --purple-300: #9a74e0;
+  --purple-200: #bda6f0;
+  --purple-100: #e2d9fb;
+
+  /* Superficies */
+  --surface-1: #141228;
+  --surface-2: #1a1433;
+  --surface-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Fondo global con degradado midnight purple */
+body {
+  background:
+    radial-gradient(1200px 600px at 10% 0%, rgba(122, 73, 200, 0.18), transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, rgba(91, 42, 169, 0.16), transparent 60%),
+    linear-gradient(180deg, #0b0a16 0%, #0f0e17 35%, #141228 100%);
+}
+
+/* Dejar ver el degradado a través del wrapper de página */
+.bg-body-tertiary { background: transparent !important; }
+
+/* Efecto glassmorphism */
+.glass-effect {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Texto con gradiente */
+.gradient-text {
+  background: linear-gradient(135deg, var(--purple-300), var(--purple-100));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Efecto de pulso para el número */
+.pulse-effect {
+  animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Efecto de chispas para hitos */
+.sparkle-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--purple-300);
+  border-radius: 50%;
+  animation: sparkle-float 1s ease-out forwards;
+}
+
+@keyframes sparkle-float {
+  to {
+    transform: translate(
+      calc(var(--x) * 50px),
+      calc(var(--y) * 50px)
+    );
+    opacity: 0;
+  }
+}
+
+/* Cajas de estadísticas */
+.stat-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: 1px solid var(--surface-border);
+}
+
+/* Badges personalizados */
+.badge {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+}
+
+/* Colores adicionales */
+.text-purple-300 { color: var(--purple-300) !important; }
+.bg-purple-800 { background-color: var(--purple-800) !important; }

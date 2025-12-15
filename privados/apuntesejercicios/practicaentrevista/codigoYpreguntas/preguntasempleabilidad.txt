@@ -1,0 +1,149 @@
+Claro, aquí tienes respuestas breves y con ejemplos basadas en un perfil de desarrollador Fullstack formado en un bootcamp.
+
+1. 3 Fortalezas y 3 Oportunidades de Mejora (con ejemplos):
+
+    Fortaleza 1 (Resolución de Problemas): En el bootcamp, un compañero eliminó una tabla de la base de datos horas antes de una entrega. Rápidamente restauré un backup y reescribí las funciones críticas que dependían de ella, solucionando la crisis.
+
+    Fortaleza 2 (Aprendizaje Ágil): Para un proyecto final, el equipo necesitaba usar GraphQL, un tema no cubierto en profundidad. En un fin de semana, estudié la documentación y construí la API que el frontend necesitaba.
+
+    Fortaleza 3 (Colaboración): En un proyecto grupal, noté que un compañero estaba perdido con Git. En lugar de hacer el commit por él, le expliqué brevemente cómo resolver conflictos y crear ramas, empoderándolo para el resto del proyecto.
+
+    Oportunidad 1 (Delegación): En un proyecto, asumí tareas del frontend y backend para "ayudar", pero creé un cuello de botella. Aprendí que debo confiar más en el equipo y comunicar la carga de trabajo.
+
+    Oportunidad 2 (Profundidad Técnica): Puedo construir una aplicación Fullstack, pero mi conocimiento de los trade-offs entre diferentes bases de datos (SQL vs. NoSQL) es aún teórico. Necesito experiencia práctica en escalabilidad.
+
+    Oportunidad 3 (Dar Feedback): A veces evito dar feedback negativo para mantener la armonía. En una ocasión, no señalé un error en el diseño de una base de datos a tiempo, lo que luego nos obligó a refactorizar código.
+
+2. 2 Competencias que me Diferencian (con situación concreta):
+Durante el bootcamp, en un hackathon de 48 horas, nuestro equipo tuvo que desarrollar una aplicación desde cero.
+
+    Competencia 1 (Pensamiento Sistémico): Mientras todos empezaban a codificar features, yo pasé la primera hora diseñando el diagrama de la base de datos y la arquitectura de la API. Esto evitó que backend y frontend chocaran constantemente y nos permitió integrar todo de forma fluida en las últimas horas.
+
+    Competencia 2 (Comunicación Técnica No-Técnica): Nuestro "Product Owner" (un instructor) cambió un requerimiento clave. En lugar de quejarme, traduje las implicaciones técnicas a un lenguaje de negocio: "Entendemos la necesidad. Si cambiamos X, podemos entregar el 80% de la funcionalidad hoy, o postergar la entrega 12 horas para el 100%. ¿Qué prefieres?". Esto facilitó una decisión informada.
+
+3. 2 Características de Personalidad para Resolver Dificultades:
+
+    Curiosidad: Cuando me atasco con un bug, no me rindo fácilmente. Investigo en Stack Overflow, foros y documentación hasta entender la raíz del problema, no solo la solución.
+
+    Pragmatismo: Priorizo tener un "producto funcionando" sobre un "producto perfecto". Prefiero una solución simple y efectiva que se pueda mejorar luego, antes que una compleja que no se entregue a tiempo.
+
+4. Actividad para Lidiar con el Estrés:
+Utilizo la Técnica Pomodoro. Cuando la presión es alta, trabajo en sprints de 25 minutos de concentración total seguidos de 5 minutos de descanso para caminar o tomar agua. Esto evita el agotamiento y mantiene la productividad.
+
+5. Aspecto de Personalidad que ha sido Obstáculo:
+Mi perfeccionismo a veces me hace perder tiempo puliendo detalles irrelevantes (como el formato del código) cuando debería estar avanzando en las funcionalidades críticas.
+
+6. Cómo me Doy Ánimo y Motivo:
+Hago una pausa, respiro y desgloso el problema grande en tareas pequeñas y manejables. Tachar esas tareas de una lista me da una sensación de progreso tangible y recupera mi motivación. Con el equipo, priorizo la meta común sobre el malestar personal y me concentro en la siguiente acción concreta.
+
+7. Estrategia para Adaptarme al Equipo:
+Soy un observador activo. En los primeros días, presto atención a cómo se comunican (Slack, email, reuniones), sus ritmos de trabajo y sus humor. Me adapto a sus canales y estilo para integrarme de forma natural.
+
+8. Lo que me Hace Idóneo para el Cargo:
+Mi combinación de habilidad técnica Fullstack y mi fuerte orientación a la colaboración y resolución práctica de problemas. No solo me enfoco en escribir código, sino en entender el "porqué" detrás de una tarea para entregar la mejor solución posible para el equipo y el producto.
+
+9. ¿Por Qué Estás Aquí?
+Porque busco un rol desafiante donde pueda aplicar las habilidades técnicas del bootcamp, pero también crecer profesionalmente en un entorno colaborativo que valore la mejora continua.
+
+10. 1 Competencia Clave que Tengo y 1 que Debo Desarrollar:
+
+    Tengo: Capacidad de aprender y aplicar nuevas tecnologías rápidamente. (Ej: Aprender GraphQL en un fin de semana para un proyecto).
+
+    Debo Desarrollar: Experiencia en sistemas en producción y monitoreo. (Por qué: El bootcamp me enseñó a "construir", pero necesito experiencia en "mantener" una aplicación viva con usuarios reales).
+
+11. Motivación por el Área:
+Nace de la satisfacción de crear soluciones tangibles a problemas reales a través del código. Ver cómo unas líneas de texto se convierten en una herramienta funcional es increíblemente motivador.
+
+12. Cómo Establezco Prioridades:
+Uso la Matriz de Eisenhower. Clasifico las tareas en:
+
+    Urgente e Importante: (Ej: Un bug en producción). Lo hago ya.
+
+    No Urgente pero Importante: (Ej: Refactorizar código). Lo programo.
+
+    Urgente pero No Importante: (Ej: Una reunión no crítica). Delego si puedo.
+
+    Ni Urgente ni Importante: (Ej: Revisar emails promocionales). Lo elimino.
+
+13. Decisión Más Difícil (Bootcamp):
+Elegir entre ayudar a un compañero a entender un concepto complejo de React horas antes de un examen o dedicar ese tiempo a repasar yo mismo. Decidí ayudarlo, priorizando el éxito del equipo. Aprendí que enseñar es la mejor forma de aprender, y ambos aprobamos.
+
+14. Característica que no Suele Gustar:
+Puedo ser demasiado directo cuando discuto soluciones técnicas, centrándome en el problema y no en los sentimientos. Para mitigarlo, conscientemente uso frases como "¿Qué te parece si probamos así?" en lugar de "Esa forma está mal".
+
+15. Lo Más Difícil y lo Mejor de Trabajar en Equipo:
+
+    Más difícil: Alinear visiones y estilos de trabajo diferentes.
+
+    Mejor: La sinergia de combinar distintas habilidades para crear algo que uno solo no podría.
+
+16. 3 Características de la Empresa Ideal:
+
+    Cultura de Aprendizaje: Que valore la experimentación y el crecimiento.
+
+    Feedback Continuo: Que exista comunicación clara y constante.
+
+    Impacto Visible: Donde mi trabajo contribuya directamente a los objetivos del negocio.
+
+17. 3 Características del Equipo Ideal:
+
+    Comunicación Abierta: Donde se pueda preguntar y equivocarse sin miedo.
+
+    Confianza Mutua: Para delegar tareas y contar con el otro.
+
+    Mentalidad Colaborativa: Donde el éxito es del equipo, no individual.
+
+18. Visualización a 5 Años:
+Me visualizo como un Desarrollador Senior Fullstack, con expertise en una stack específico y mentorando a nuevos desarrolladores. Este trabajo y esta empresa serán la base donde adquiera esa experiencia técnica y de liderazgo.
+
+19. Situación Compleja en el Bootcamp:
+En el proyecto final, dos compañeros chocaban constantemente en la visión del producto. Organicé una reunión de mediación donde, usando la pizarra, listamos los pros y contras de cada enfoque. Logramos consensuar una solución híbrida que integraba lo mejor de ambas ideas y entregamos a tiempo.
+
+20. Cómo Sabrán que Soy un Buen Elemento para Cualquier Equipo:
+Por mi adaptabilidad y proactividad. No espero a que me asignen tareas, pregunto "¿en qué puedo ayudar?" y me integro rápidamente a la dinámica del equipo, aportando valor desde el inicio.
+
+21. Experiencia Reciente de Aprendizaje:
+Durante el bootcamp, un proyecto se complicó por mal manejo de Git. Aprendí a hacer commits atómicos y descriptivos, y a trabajar siempre en ramas. Hoy, esto es una práctica non-negotiable para mí que aplico en todo proyecto.
+
+22. Error que me Enseñó Rigurosidad:
+Una vez, en un proyecto personal, no validé correctamente los datos en el backend porque asumí que el frontend siempre enviaría la información correcta. El resultado fue que la aplicación se cayó. Ahora, siempre valido y sanitizo los datos en ambos lados, sin confiar en supuestos.
+
+23. Cómo Organizo un Día de Trabajo:
+
+    Reviso mi lista de tareas y priorizo con la matriz de Eisenhower.
+
+    Bloqueo tiempo en el calendario para tareas que requieren concentración.
+
+    Uso la metodología Pomodoro para ejecutar.
+
+    Al final del día, reviso lo completado y planifico el siguiente.
+
+24. 3 Motivos de Interés en el Cargo (Ej: Desarrollador Fullstack):
+
+    La oportunidad de trabajar en todo el stack de una aplicación (frontend y backend).
+
+    El desafío técnico específico que mencionaron (ej: trabajar con microservicios).
+
+    La posibilidad de aprender de un equipo con experiencia en un producto escalable.
+
+25. Ejemplo de Manejo de Conflictos:
+Conflicto Técnico: Un compañero insistía en una solución compleja para un feature. En lugar de imponer la mía, propuse: "Hagamos un spike. Cada uno prototipa su solución en 2 horas y luego comparamos cuál es más eficiente y mantenible". La evidencia resolvió el conflicto.
+Conflicto Humano: Dos compañeros no se hablaban por un desacuerdo. Organicé una breve conversación facilitada, centrándonos en el objetivo común ("entregar el proyecto") y no en las culpas.
+
+26. Lo que Diría mi Ex-Jefatura/Profesor:
+"Es una persona confiable y resolutiva. Aprende extremadamente rápido y siempre está dispuesta a ayudar a los demás. A veces puede ser un poco intenso en su búsqueda de la mejor solución, pero su actitud es siempre positiva y constructiva."
+
+27. Lo que Más y Menos me Gustó (Bootcamp):
+
+    Más: La satisfacción de ver una aplicación completa funcionando después de semanas de trabajo duro.
+
+    Menos: La frustración de lidiar con configuraciones de entorno y dependencias que no funcionan, un proceso a veces tedioso pero necesario.
+
+28. Especialización a Corto/Mediano Plazo:
+
+    Corto Plazo: Profundizar en React y Node.js para ser más eficiente.
+
+    Mediano Plazo: Especializarme en arquitectura de software o DevOps para entender mejor cómo diseñar sistemas escalables.
+
+29. Cuándo No Sería una Buena Idea Contratarme:
+No me contraten si buscan a alguien exclusivamente para mantener legacy code sin opción a mejorar procesos o implementar nuevas tecnologías. Mi motivación principal es el crecimiento y la innovación, y en un entorno estático no rendiría al máximo.

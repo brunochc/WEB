@@ -1,0 +1,32 @@
+# Secrets y variables de entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+secrets/
+secretos/
+config/secrets/
+*.key
+*.pem
+*.cert
+credentials.json
+
+# ============================================
+# SECRETS ENCONTRADOS - NO SUBIR NUNCA
+# ============================================
+# Archivos .env REALES (ya comprometidos)
+proyectos/LibreDTE/.env
+proyectos/www/LibreDTE/.env
+proyectos/RealServices/real-services/server/.env
+proyectos/frappe_docker/example.env
+proyectos/frappe_docker/frappe_docker/example.env
+proyectos/RSC/server/.env
+backend/Clima-API/weather-app/.env
+frontend/weather-app/.env
+
+# Patrones generales para .env
+.env
+.env.local
+.env.*
+!.env.example

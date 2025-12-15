@@ -1,0 +1,29 @@
+<!--al pulsar botonal pulsar boton los elementos tengan contenido distinto-->«
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificacion de muchos elementos</title>
+</head>
+<body>
+    <button id="cambiartextoboton">Cambiar texto</button>
+    <div class="item">primer elemento</div>
+    <p class="item">segundo elemento</p>
+    <span class="item">tercer elemento</span>
+
+    <script>
+
+        const cambiartextoboton = document.getElementById("cambiartextoboton")
+        const item = document.getElementsByClassName("item")
+
+        cambiartextoboton.addEventListener("click", () => {
+            for (let i = 0; i < item.length; i++) {
+                item[i].textContent = "texto modificado"
+            }
+        })
+    </script>
+
+</body>
+</html>

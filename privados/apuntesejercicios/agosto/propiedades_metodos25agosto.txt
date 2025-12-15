@@ -1,0 +1,20 @@
+propiedades 
+
+una propiedad es un valor asociado a un objeto 
+
+cont player one = {
+"name": "ash",
+"attack": 21,
+"inventory": [
+    "aple",
+    "potion",
+    "ruby"
+
+]
+
+}
+
+un objeto puede tener infinidad de propiedades
+
+un metodo es una funcion asociada a un objeto
+    
