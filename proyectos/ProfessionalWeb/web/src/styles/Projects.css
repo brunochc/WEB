@@ -1,0 +1,110 @@
+/* Projects.css */
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: var(--text-color);
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.projects-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.projects-header .highlight {
+    color: var(--secondary-color);
+}
+
+.projects-header .subtitle {
+    font-size: 1.2rem;
+    color: #8892b0;
+    font-family: monospace;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #112240;
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--secondary-color);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.folder-icon {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.project-links a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--secondary-color);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.project-description {
+    color: #8892b0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-tech-list li {
+    color: var(--secondary-color);
+    font-family: monospace;
+    font-size: 0.85rem;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .projects-header h1 {
+        font-size: 2.5rem;
+    }
+}
