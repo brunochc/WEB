@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
+import ResumeDownload from '../components/ResumeDownload';
 
 const About = () => {
     return (
@@ -69,8 +70,10 @@ const About = () => {
                         This background gives me the confidence to contribute in any way necessary. Whether tackling complex technical challenges or supporting critical operational tasks, I am fully capable and willing to add value wherever the team needs it most.
                     </p>
                 </div>
-            </section >
-        </div >
+            </section>
+
+            <ResumeDownload />
+        </div>
     );
 };
 

@@ -23,14 +23,13 @@ const Contact = () => {
                         <p>bruno.henriquez.1993@gmail.com</p>
                     </a>
 
-                    <div className="contact-card phone-card">
+                    <a href="https://linkedin.com/in/bruno-henriquezcano" target="_blank" rel="noopener noreferrer" className="contact-card linkedin-card">
                         <div className="icon-wrapper">
-                            <span className="icon">📱</span>
+                            <span className="icon">💼</span>
                         </div>
-                        <h3>Call Me</h3>
-                        <p>+1 (Coming Soon)</p>
-                        <span className="note">Canadian number pending arrival</span>
-                    </div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally</p>
+                    </a>
                 </div>
             </section>
         </div>

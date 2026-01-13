@@ -1,0 +1,144 @@
+/* ResumeDownload.css */
+.resume-download-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.resume-download-section h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #8892b0;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.resume-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.resume-card {
+    background: #112240;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 30px;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.resume-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--secondary-color);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.resume-card:hover .card-icon {
+    background: rgba(100, 255, 218, 0.2);
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.resume-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-description {
+    color: #8892b0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.card-features li {
+    color: #8892b0;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card-features i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateX(3px);
+}
+
+.download-btn i {
+    font-size: 1.2rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .resume-download-section h2 {
+        font-size: 2rem;
+    }
+
+    .resume-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card-icon i {
+        font-size: 2rem;
+    }
+}

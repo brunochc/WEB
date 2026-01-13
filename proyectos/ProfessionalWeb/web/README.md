@@ -1,16 +1,51 @@
-# React + Vite
+# Professional Portfolio - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This directory contains the frontend application for the Professional Portfolio, built with **React 18** and **Vite**. It utilizes **Bootstrap 5** for responsive layout and custom CSS for the dark theme aesthetic.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **Core:** React, ReactDOM
+- **Build Tool:** Vite
+- **Routing:** React Router DOM
+- **Styling:** Bootstrap 5, Bootstrap Icons, Custom CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Scripts
 
-## React Compiler
+| Script | Description |
+| :--- | :--- |
+| `npm run dev` | Starts the development server with HMR at `http://localhost:5173`. |
+| `npm run build` | Builds the application for production to the `dist` folder. |
+| `npm run lint` | Runs ESLint to check for code quality issues. |
+| `npm run preview` | Locally previews the production build. |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
 
-## Expanding the ESLint configuration
+```
+src/
+├── components/
+│   ├── Layout.jsx       # Main layout wrapper (Navbar + Outlet + Footer)
+│   └── Navbar.jsx       # Responsive navigation bar
+├── pages/
+│   ├── Home.jsx         # Landing page with hero section
+│   ├── About.jsx        # Detailed profile and skills
+│   ├── Projects.jsx     # Grid showcase of key projects
+│   └── Contact.jsx      # Contact information and form placeholder
+├── styles/
+│   ├── About.css        # Styles for About page
+│   ├── Contact.css      # Styles for Contact page
+│   ├── Home.css         # Styles for Home page
+│   ├── Navbar.css       # Styles for Navbar overrides
+│   └── Projects.css     # Styles for Projects grid
+├── App.jsx              # Route definitions
+├── main.jsx             # Entry point (Bootstrap imports)
+└── index.css            # Global styles and variables
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Dependencies
+- `bootstrap`: ^5.3.0
+- `bootstrap-icons`: ^1.11.0
+- `react-router-dom`: ^6.20.0
+
+## Development Notes
+- **Styling:** We use standard CSS modules imported in components. Bootstrap classes are used for layout (grid, navbar), while custom CSS handles the specific color palette (`#0a192f`, `#64ffda`).
+- **Assets:** Static assets (images, PDFs) should be placed in the `public` directory.
