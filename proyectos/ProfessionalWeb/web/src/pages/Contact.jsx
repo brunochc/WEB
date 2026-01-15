@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Contact.css';
 
 const Contact = () => {
+    const [copied, setCopied] = useState(false);
+    const email = 'bruno.henriquez.1993@gmail.com';
+
+    const handleCopyEmail = async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        try {
+            await navigator.clipboard.writeText(email);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch (err) {
+            console.error('Failed to copy email:', err);
+        }
+    };
+
     return (
         <div className="contact-container">
             <header className="contact-header">
@@ -15,13 +31,32 @@ const Contact = () => {
                 </p>
 
                 <div className="contact-cards">
-                    <a href="mailto:bruno.henriquez.1993@gmail.com" className="contact-card email-card">
-                        <div className="icon-wrapper">
-                            <span className="icon">✉️</span>
-                        </div>
-                        <h3>Email Me</h3>
-                        <p>bruno.henriquez.1993@gmail.com</p>
-                    </a>
+                    <div className="contact-card email-card">
+                        <a href={`mailto:${email}`} className="email-link">
+                            <div className="icon-wrapper">
+                                <span className="icon">✉️</span>
+                            </div>
+                            <h3>Email Me</h3>
+                            <p>{email}</p>
+                        </a>
+                        <button
+                            className={`copy-button ${copied ? 'copied' : ''}`}
+                            onClick={handleCopyEmail}
+                            aria-label="Copy email to clipboard"
+                        >
+                            {copied ? (
+                                <>
+                                    <span className="copy-icon">✓</span>
+                                    <span className="copy-text">Copied!</span>
+                                </>
+                            ) : (
+                                <>
+                                    <span className="copy-icon">📋</span>
+                                    <span className="copy-text">Copy</span>
+                                </>
+                            )}
+                        </button>
+                    </div>
 
                     <a href="https://linkedin.com/in/bruno-henriquezcano" target="_blank" rel="noopener noreferrer" className="contact-card linkedin-card">
                         <div className="icon-wrapper">

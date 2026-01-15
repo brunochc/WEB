@@ -21,7 +21,7 @@ const ResumeDownload = () => {
                         <li><i className="bi bi-check-circle-fill"></i> Full-stack development</li>
                         <li><i className="bi bi-check-circle-fill"></i> Automotive diagnostics</li>
                     </ul>
-                    <a href="/resume_hybrid.pdf" download="Bruno_Henriquez_Resume_Hybrid.pdf" className="download-btn">
+                    <a href="/Resume_BrunoH_HY.pdf" download="Resume_BrunoH_HY.pdf" className="download-btn">
                         <i className="bi bi-download"></i> Download PDF
                     </a>
                 </div>
@@ -39,7 +39,7 @@ const ResumeDownload = () => {
                         <li><i className="bi bi-check-circle-fill"></i> Data pipelines & ETL</li>
                         <li><i className="bi bi-check-circle-fill"></i> Oracle & SQL databases</li>
                     </ul>
-                    <a href="/resume_tech.pdf" download="Bruno_Henriquez_Resume_Tech.pdf" className="download-btn">
+                    <a href="/Resume_BrunoH_IT.pdf" download="Resume_BrunoH_IT.pdf" className="download-btn">
                         <i className="bi bi-download"></i> Download PDF
                     </a>
                 </div>

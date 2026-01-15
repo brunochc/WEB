@@ -88,6 +88,57 @@
 /* Specific styles for the link card to reset default link styles if needed */
 .email-card {
     cursor: pointer;
+    position: relative;
+}
+
+.email-card .email-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.copy-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(100, 255, 218, 0.1);
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+.copy-button:hover {
+    background-color: rgba(100, 255, 218, 0.2);
+    transform: scale(1.05);
+}
+
+.copy-button:active {
+    transform: scale(0.95);
+}
+
+.copy-button.copied {
+    background-color: rgba(100, 255, 218, 0.25);
+    border-color: var(--secondary-color);
+}
+
+.copy-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.copy-text {
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 .phone-card {
