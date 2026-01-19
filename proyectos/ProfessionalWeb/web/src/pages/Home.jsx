@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LightPillar from '../components/LightPillar';
 import '../styles/Home.css';
 
 const Home = () => {
@@ -21,8 +22,18 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="hero-visual">
-                    {/* Placeholder for the visual concept - maybe a CSS shape or image later */}
-                    <div className="visual-circle"></div>
+                    <LightPillar
+                        topColor="#64ffda"
+                        bottomColor="#0a192f"
+                        intensity={0.4}
+                        rotationSpeed={0.1}
+                        glowAmount={0.003}
+                        pillarWidth={20.0}
+                        pillarHeight={1.0}
+                        noiseIntensity={0.2}
+                        pillarRotation={15}
+                        interactive={true}
+                    />
                 </div>
             </section>
         </div>
