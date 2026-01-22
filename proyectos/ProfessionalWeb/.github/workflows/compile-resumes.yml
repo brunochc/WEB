@@ -1,0 +1,44 @@
+name: Compile LaTeX Resumes
+
+on:
+  push:
+    paths:
+      - 'resume_hybrid.tex'
+      - 'resume_tech.tex'
+      - '.github/workflows/compile-resumes.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Compile LaTeX documents
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            resume_hybrid.tex
+            resume_tech.tex
+          
+      - name: Create resumes directory
+        run: mkdir -p web/public/resumes
+        
+      - name: Move PDFs to public directory
+        run: |
+          mv resume_hybrid.pdf web/public/resumes/
+          mv resume_tech.pdf web/public/resumes/
+          
+      - name: Commit PDFs
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add web/public/resumes/*.pdf
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: auto-compile resume PDFs"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
