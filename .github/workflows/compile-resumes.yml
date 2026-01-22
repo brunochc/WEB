@@ -15,28 +15,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Compile LaTeX documents
+      - name: Compile Hybrid Resume
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            Resume_BrunoH_HY.tex
-            Resume_BrunoH_IT.tex
+          root_file: Resume_BrunoH_HY.tex
+          working_directory: proyectos/ProfessionalWeb
+          
+      - name: Compile IT Resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Resume_BrunoH_IT.tex
           working_directory: proyectos/ProfessionalWeb
           
       - name: Create public directory if needed
-        run: mkdir -p proyectos/ProfessionalWeb/web/public
+        run: mkdir -p web/public
+        working-directory: proyectos/ProfessionalWeb
         
       - name: Move PDFs to public directory
         run: |
-          mv proyectos/ProfessionalWeb/Resume_BrunoH_HY.pdf proyectos/ProfessionalWeb/web/public/
-          mv proyectos/ProfessionalWeb/Resume_BrunoH_IT.pdf proyectos/ProfessionalWeb/web/public/
+          mv Resume_BrunoH_HY.pdf web/public/
+          mv Resume_BrunoH_IT.pdf web/public/
+        working-directory: proyectos/ProfessionalWeb
           
       - name: Commit PDFs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add proyectos/ProfessionalWeb/web/public/*.pdf
+          git add web/public/*.pdf
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: auto-compile resume PDFs"
+        working-directory: proyectos/ProfessionalWeb
           
       - name: Push changes
         uses: ad-m/github-push-action@master
