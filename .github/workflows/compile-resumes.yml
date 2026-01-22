@@ -19,8 +19,9 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            proyectos/ProfessionalWeb/Resume_BrunoH_HY.tex
-            proyectos/ProfessionalWeb/Resume_BrunoH_IT.tex
+            Resume_BrunoH_HY.tex
+            Resume_BrunoH_IT.tex
+          working_directory: proyectos/ProfessionalWeb
           
       - name: Create public directory if needed
         run: mkdir -p proyectos/ProfessionalWeb/web/public
