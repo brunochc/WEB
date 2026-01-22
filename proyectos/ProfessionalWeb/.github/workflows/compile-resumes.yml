@@ -3,8 +3,8 @@ name: Compile LaTeX Resumes
 on:
   push:
     paths:
-      - 'resume_hybrid.tex'
-      - 'resume_tech.tex'
+      - 'Resume_BrunoH_HY.tex'
+      - 'Resume_BrunoH_IT.tex'
       - '.github/workflows/compile-resumes.yml'
 
 jobs:
@@ -19,16 +19,16 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            resume_hybrid.tex
-            resume_tech.tex
+            Resume_BrunoH_HY.tex
+            Resume_BrunoH_IT.tex
           
       - name: Create resumes directory
         run: mkdir -p web/public/resumes
         
       - name: Move PDFs to public directory
         run: |
-          mv resume_hybrid.pdf web/public/resumes/
-          mv resume_tech.pdf web/public/resumes/
+          mv Resume_BrunoH_HY.pdf web/public/resumes/
+          mv Resume_BrunoH_IT.pdf web/public/resumes/
           
       - name: Commit PDFs
         run: |
