@@ -11,6 +11,7 @@ config/secrets/
 *.pem
 *.cert
 credentials.json
+privados/
 
 # ============================================
 # SECRETS ENCONTRADOS - NO SUBIR NUNCA
