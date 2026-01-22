@@ -22,19 +22,19 @@ jobs:
             Resume_BrunoH_HY.tex
             Resume_BrunoH_IT.tex
           
-      - name: Create resumes directory
-        run: mkdir -p web/public/resumes
+      - name: Create public directory if needed
+        run: mkdir -p web/public
         
       - name: Move PDFs to public directory
         run: |
-          mv Resume_BrunoH_HY.pdf web/public/resumes/
-          mv Resume_BrunoH_IT.pdf web/public/resumes/
+          mv Resume_BrunoH_HY.pdf web/public/
+          mv Resume_BrunoH_IT.pdf web/public/
           
       - name: Commit PDFs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add web/public/resumes/*.pdf
+          git add web/public/*.pdf
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: auto-compile resume PDFs"
           
       - name: Push changes
