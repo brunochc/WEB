@@ -1,0 +1,185 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{setspace}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    filecolor=black
+}
+
+\setlist[itemize]{leftmargin=*,nosep,after=\vspace{0.1cm}}
+\setlist[enumerate]{leftmargin=*,nosep}
+\setlength{\parskip}{0.3cm}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{Bruno Camilo Henríquez Cano}} \\[0.3cm]
+    {\Large Ingeniero $\cdot$ Desarrollador Full-Stack} \\[0.1cm]
+    {\Large Especialista en Soluciones Industriales}
+\end{center}
+
+\vspace{0.3cm}
+
+% Contact
+\noindent
+\begin{minipage}[t]{0.5\textwidth}
+    \faMapMarker\ Paine, Chile \\
+    \faPhone\ +56 9 2815 6161 \\
+    \faEnvelope\ \href{mailto:bruno.henriquez.1993@gmail.com}{bruno.henriquez.1993@gmail.com}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \faLinkedin\ \href{https://linkedin.com/in/bruno-henriquezcano}{linkedin.com/in/bruno-henriquezcano} \\
+    \faGithub\ \href{https://github.com/brunochc}{github.com/brunochc} \\
+    \faGlobe\ \href{https://bchc.tech}{bchc.tech} \\
+    \faCar\ Licencia de Conducir Clase B
+\end{minipage}
+
+\vspace{0.4cm}
+
+% Professional Profile
+\noindent{\Large \textbf{PERFIL PROFESIONAL}}
+
+\vspace{0.2cm}
+
+\noindent Ingeniero con más de 7 años de experiencia en gestión de activos industriales y desarrollo de soluciones digitales. Especializado en transformar operaciones manuales en sistemas estructurados mediante la implementación de bases de datos, planes de mantenimiento preventivo y herramientas de control operativo. Experiencia comprobada en consolidar información dispersa, automatizar reportes de KPIs, y crear dashboards para la toma de decisiones. Conocimiento profundo de componentes y sistemas de maquinaria (mecánicos, hidráulicos, eléctricos), con enfoque en optimización de procesos y reducción de costos operativos. Busco roles donde pueda aportar tanto en la gestión técnica como en el desarrollo de herramientas digitales que generen valor medible.
+
+\vspace{0.4cm}
+
+% Work Experience
+\noindent{\Large \textbf{EXPERIENCIA LABORAL}}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Ingeniero de Desarrollo Full-Stack} \\
+\textit{Generation Chile — Providencia — Julio 2025 – Octubre 2025}
+\begin{itemize}
+    \item Diseñé y desplegué una plataforma médica con stack MERN para centralizar historiales clínicos, recetas y exámenes.
+    \item Implementé control de acceso basado en roles (RBAC) para asegurar datos sensibles con autenticación JWT.
+    \item Entregué una solución lista para producción que reduce la fragmentación de datos en flujos de trabajo de salud.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\noindent \textbf{Secretario de Planificación Técnica} \\
+\textit{Consorcio Acciona Ossa Pizzarotti (Codelco) — Calama — Diciembre 2023 – Enero 2025}
+\begin{itemize}
+    \item \textbf{Análisis Estratégico \& Centralización de Datos:} Consolidé datos de mantenimiento dispersos (Excel, SAP) en bases de datos SQL estructuradas para una flota de más de 100 equipos pesados de minería, transformando la gestión reactiva en toma de decisiones basada en datos.
+    \item \textbf{Control Financiero:} Trackeé y reporté gastos de suministros de taller, generando informes mensuales para un presupuesto promedio de \$2M CAD (1.5B CLP), asegurando el monitoreo preciso de costos operativos.
+    \item \textbf{Optimización de Procesos:} Automaticé reportes diarios de KPIs (MTBF, MTTR, OEE) y logística de repuestos, mejorando significativamente la integridad de datos y reduciendo desviaciones presupuestarias.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\noindent \textbf{Coordinador de Sistemas y Análisis de Flota} \\
+\textit{STP Santiago S.A — Maipú — Junio 2021 – Agosto 2023}
+\begin{itemize}
+    \item Desarrollé scripts de automatización en VBA para procesar datos de telemetría de más de 400 buses, reduciendo el tiempo de generación de reportes en un 30\%.
+    \item Diseñé pipelines ETL migrando 5 años de registros históricos de mantenimiento a una base de datos centralizada.
+    \item Construí dashboards en Power BI para la toma de decisiones ejecutivas, mejorando la disponibilidad de la flota en un 15\%.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\noindent \textbf{Técnico Automotriz Independiente} \\
+\textit{Autónomo — Paine, Chile — 2014 – 2020}
+\begin{itemize}
+    \item Diagnosticé y reparé fallas complejas electrónicas y mecánicas en más de 30 vehículos mensuales, especializándome en casos de diagnóstico "sin solución".
+    \item Mantuve una tasa de satisfacción del cliente del 95\% mediante resolución sistemática de problemas y comunicación transparente.
+    \item Gestioné relaciones con clientes, fijación de precios y abastecimiento de repuestos de manera autónoma.
+\end{itemize}
+
+\vspace{0.4cm}
+
+% Technical Projects
+\noindent{\Large \textbf{PROYECTOS TÉCNICOS}}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item \textbf{Plataforma de Información Médica:} Aplicación stack MERN con API RESTful, base de datos MongoDB y frontend responsivo en React. \href{https://github.com/Medula-Chile}{GitHub: Medula-Chile}
+    \item \textbf{Automatización de Análisis de Flota:} Scripts en Python + VBA para extracción, transformación y visualización de datos desde sistemas legados.
+    \item \textbf{Portafolio Profesional:} Sitio web basado en React que muestra perfil dual. \href{https://github.com/brunochc/WEB}{GitHub: brunochc/WEB}
+\end{itemize}
+
+\vspace{0.4cm}
+
+% Skills
+\noindent{\Large \textbf{HABILIDADES TÉCNICAS}}
+\vspace{0.3cm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Desarrollo de Software:}
+\begin{itemize}
+    \item JavaScript (Node.js, React, Express)
+    \item Python, HTML5, CSS3
+    \item APIs RESTful, Git/GitHub
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Datos \& Analítica:}
+\begin{itemize}
+    \item SQL (Oracle, MySQL), MongoDB
+    \item Pipelines ETL, Power BI
+    \item Macros VBA, Power Query
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Gestión de Activos:}
+\begin{itemize}
+    \item SAP-PM, KPIs de Mantenimiento
+    \item Planificación Preventiva
+    \item Gestión de Inventarios
+    \item Componentes: Mecánicos, Hidráulicos, Eléctricos
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Certificaciones:}
+\begin{itemize}
+    \item Oracle Cloud Infrastructure (OCI)
+    \item Full-Stack JavaScript (Generation)
+\end{itemize}
+\end{minipage}
+
+\vspace{0.3cm}
+
+% Education
+\vspace{0.4cm}
+\noindent{\Large \textbf{EDUCACIÓN}}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Ingeniería en Maquinarias, Sistemas Automotrices y Electrónicos} \\
+\textit{INACAP — Marzo 2014 – Octubre 2019}
+
+\vspace{0.2cm}
+
+\noindent \textbf{Ingeniería Civil en Computación (2 años completados)} \\
+\textit{Universidad Tecnológica Metropolitana — Marzo 2012 – Marzo 2014}
+
+\vspace{0.4cm}
+
+% Languages
+\noindent{\Large \textbf{IDIOMAS}}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Inglés:} B2 (Documentación técnica y comunicación profesional) \\
+\noindent \textbf{Español:} Nativo
+
+\end{document}
