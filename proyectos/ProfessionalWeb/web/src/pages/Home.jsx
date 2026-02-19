@@ -9,12 +9,10 @@ const Home = () => {
             <section className="hero-section">
                 <div className="hero-content">
                     <h1 className="hero-title">
-                        Transforming <span className="highlight">Operational Chaos</span> into <span className="highlight">Structured Efficiency</span>
+                        From the Field <span className="highlight">to the Code</span>
                     </h1>
                     <p className="hero-subtitle">
-                        Full-Stack Development & Industrial Optimization.
-                        <br />
-                        Bridging the gap between physical systems and digital solutions.
+                        Engineer with hands-on field experience, building digital tools that solve real problems.
                     </p>
                     <div className="hero-buttons">
                         <Link to="/projects" className="btn btn-primary">View Projects</Link>
