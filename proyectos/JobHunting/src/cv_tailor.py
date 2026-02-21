@@ -22,6 +22,14 @@ class CVTailor:
         """Read LaTeX template from file"""
         with open(template_path, 'r', encoding='utf-8') as f:
             return f.read()
+
+    def _read_generation_rules(self):
+        """Read standard rules if available"""
+        rules_path = "cv_generation_rules.md"
+        if os.path.exists(rules_path):
+            with open(rules_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        return ""
     
     def select_template(self, category: str) -> str:
         """Select appropriate template based on job category"""
@@ -48,6 +56,7 @@ class CVTailor:
         }
         
         extra_instruction = category_instructions.get(category, "")
+        global_rules = self._read_generation_rules()
         
         prompt = f"""
         You are an expert career coach and technical recruiter. 
@@ -74,11 +83,16 @@ class CVTailor:
         6. Ensure the language is {language}.
         7. Maintain professional tone appropriate for the {category} sector.
         8. Return ONLY the modified LaTeX code, with NO markdown code blocks or explanations.
+        
+        GLOBAL RULES TO FOLLOW STRICTLY EVERY TIME:
+        {global_rules}
         """
+        
+        system_content = "You are a professional CV writer. Return ONLY the raw LaTeX code, without markdown markers. Strictly follow the GLOBAL RULES provided."
         
         response = self.client.chat.completions.create(
             model=self.model,
-            messages=[{"role": "system", "content": "You are a professional CV writer. Return ONLY the raw LaTeX code, without markdown markers."},
+            messages=[{"role": "system", "content": system_content},
                       {"role": "user", "content": prompt}]
         )
         

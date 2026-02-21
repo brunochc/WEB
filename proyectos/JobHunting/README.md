@@ -80,17 +80,17 @@ HEADLESS_BROWSER=true  # true para modo headless, false para ver el browser
   --lang es
 ```
 
-### Opción 2: Usar archivo de descripción
+### Opción 2: Usar archivo de descripción (Recomendado para Ofertas Locales)
 
 ```bash
-# Crear archivo con la descripción del trabajo
-cat > job_desc.txt << EOF
+# Crear archivo con la descripción del trabajo en la carpeta inputs/
+cat > inputs/job_desc.txt << EOF
 Buscamos Ingeniero en Maquinaria con experiencia en...
 EOF
 
 # Generar CV
 ./venv/bin/python src/main.py \
-  --desc-file job_desc.txt \
+  --desc-file inputs/job_desc.txt \
   --company "Nombre Empresa" \
   --category machinery_engineer \
   --auto-classify
@@ -112,19 +112,23 @@ JobHunting/
 │   ├── main.py                  # Script principal
 │   ├── linkedin_extractor.py    # Extractor de LinkedIn
 │   ├── job_classifier.py        # Clasificador de trabajos
-│   ├── cv_tailor.py            # Personalizador de CV con IA
-│   ├── researcher.py           # Investigador de empresas
-│   └── utils.py                # Utilidades (compilación LaTeX)
+│   ├── cv_tailor.py             # Personalizador de CV con IA (inyecta reglas globales)
+│   ├── researcher.py            # Investigador de empresas
+│   └── utils.py                 # Utilidades (compilación LaTeX)
 ├── templates/
 │   ├── Resume_BrunoH_Machinery.tex    # Template maquinaria
 │   ├── Resume_BrunoH_Workshop.tex     # Template taller
 │   ├── Resume_BrunoH_Remote.tex       # Template remoto
 │   ├── Resume_BrunoH_HY.tex           # Template híbrido
 │   └── Resume_BrunoH_IT.tex           # Template IT
-├── output/                     # CVs generados
-├── requirements.txt            # Dependencias Python
-├── .env                       # Variables de entorno (crear)
-└── README.md                  # Este archivo
+├── inputs/                      # (Ignorado en Git) Ofertas laborales y descripciones en .txt o .md
+├── output/                      # (Ignorado en Git) CVs generados en PDF y LaTeX
+├── docs/                        # Documentación del proyecto y notas de planificación
+├── scripts_utils/               # Scripts de prueba y utilidades secundarias
+├── requirements.txt             # Dependencias Python
+├── cv_generation_rules.md       # Reglas globales inyectadas al LLM para la redacción de CVs
+├── .env                         # Variables de entorno (crear)
+└── README.md                    # Este archivo
 ```
 
 ## 🔍 Cómo Funciona
